@@ -1,6 +1,6 @@
 # Dành cho các thành viên không chuyên về kỹ thuật.
 
-Để xem giao diện website từ, làm theo các bước đơn giản sau:
+Để xem giao diện website, làm theo các bước đơn giản sau:
 
 1. **Download**: Nhấn vào `Code` trên trang GitHub và chọn `Download ZIP`. Sau khi tải về, giải nén tệp ZIP.
 
