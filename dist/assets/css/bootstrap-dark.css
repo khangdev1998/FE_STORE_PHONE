@@ -13994,4 +13994,26 @@ button:not(:disabled) {
 }
 .modal .modal-dialog.modal-sm {
   max-width: 450px;
+}f8f9fa;
+  background: none;
+}
+.offcanvas .offcanvas-header .btn-close:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.offcanvas.offcanvas-end, .offcanvas.offcanvas-start {
+  width: 350px;
+}
+
+.modal .modal-dialog .modal-content {
+  background-color: modal-content-bg;
+}
+.modal .modal-dialog .modal-content .modal-header button.btn-close {
+  background: none;
+}
+.modal .modal-dialog .modal-content button.btn-close {
+  background: none;
+}
+.modal .modal-dialog.modal-sm {
+  max-width: 450px;
 }

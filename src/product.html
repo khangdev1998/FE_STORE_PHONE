@@ -1,0 +1,150 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        <!-- Css -->
+        <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+
+    </head>
+
+    <body>
+        <div class="page-wrapper toggled">
+            @@include("partials/sidebar-dark.html")
+
+            <!-- Start Page Content -->
+            <main class="page-content bg-light">
+                @@include("partials/top-header.html")
+
+                <div class="container-fluid">
+                        <div class="layout-specing">
+                            <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Danh mục sản phẩm</h5>
+
+                            <nav aria-label="breadcrumb" class="d-inline-block mt-2 mt-sm-0">
+                                <ul class="breadcrumb bg-transparent rounded mb-0 p-0">
+                                    <li class="breadcrumb-item text-capitalize"><a href="/admin/">The100</a>
+                                    </li>
+                                    <li class="breadcrumb-item text-capitalize active" aria-current="page">Danh mục sản phẩm
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-12 col-md-3">
+                                <form class="m-0 d-flex" method="GET">
+                                    <input type="text" id="name" name="keyword" class="form-control" placeholder="Search..." required="" value="">
+                                    <button type="submit" class="btn btn-md btn-primary ms-2">Search</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 mb-2 w-100 d-flex justify-content-sm-end">
+                            <a class="btn btn-md btn-primary" href="/category/create/">Create</a>
+                        </div>
+
+                        <div class="table-responsive bg-white shadow rounded">
+                            <table class=" table mb-0 table-center">
+                                <thead class="bg-light">
+                                <tr>
+                                    <th scope="col" class="p-3 border-bottom" style="width: 5%;">STT</th>
+                                    <th scope="col" class="p-3 border-1" style="min-width: 35%;">Tên danh mục</th>
+                                    <th scope="col" class="p-3 border-bottom " style="width: 15%;">Trạng thái</th>
+                                    <th scope="col" class="p-3 border-bottom" style="width: 15%;">Thời gian tạo</th>
+                                    <th scope="col" class="p-3 border-bottom" style="width: 15%;">Thời gian cập nhật</th>
+                                    <th scope="col" class="p-3 border-bottom" style="width: 15%;"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="p-3">1</td>
+                                    <td class="p-3">Quần áo</td>
+                                    <td class="p-3"> <span class="badge bg-success py-2 px-3">On</span></td>
+                                    <td class="p-3">March 4, 2024, 5:47 p.m.</td>
+                                    <td class="p-3">March 4, 2024, 5:47 p.m.</td>
+                                    <td class="p-3"><a class="btn btn-md btn-outline-info" href="/category/1/update/"><i class="bi bi-pencil-square"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">2</td>
+                                    <td class="p-3">Giày</td>
+                                    <td class="p-3"> <span class="badge bg-success py-2 px-3">On</span></td>
+                                    <td class="p-3">March 16, 2024, 1:17 p.m.</td>
+                                    <td class="p-3">March 17, 2024, 4:31 a.m.</td>
+                                    <td class="p-3"><a class="btn btn-md btn-outline-info" href="/category/2/update/"><i class="bi bi-pencil-square"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">3</td>
+                                    <td class="p-3">Áo khoác nam</td>
+                                    <td class="p-3"> <span class="badge bg-success py-2 px-3">On</span></td>
+                                    <td class="p-3">March 16, 2024, 1:28 p.m.</td>
+                                    <td class="p-3">March 16, 2024, 1:28 p.m.</td>
+                                    <td class="p-3"><a class="btn btn-md btn-outline-info" href="/category/3/update/"><i class="bi bi-pencil-square"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">4</td>
+                                    <td class="p-3">Nón len</td>
+                                    <td class="p-3"><span class="badge bg-secondary py-2 px-3">Off</span></td>
+                                    <td class="p-3">March 16, 2024, 2:39 p.m.</td>
+                                    <td class="p-3">March 17, 2024, 4:32 a.m.</td>
+                                    <td class="p-3"><a class="btn btn-md btn-outline-info" href="/category/4/update/"><i class="bi bi-pencil-square"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">5</td>
+                                    <td class="p-3">áo sơ mi</td>
+                                    <td class="p-3"> <span class="badge bg-success py-2 px-3">On</span></td>
+                                    <td class="p-3">March 16, 2024, 2:42 p.m.</td>
+                                    <td class="p-3">March 16, 2024, 2:44 p.m.</td>
+                                    <td class="p-3"><a class="btn btn-md btn-outline-info" href="/category/5/update/"><i class="bi bi-pencil-square"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">6</td>
+                                    <td class="p-3">Áo khoác</td>
+                                    <td class="p-3"> <span class="badge bg-success py-2 px-3">On</span></td>
+                                    <td class="p-3">March 17, 2024, 4:31 a.m.</td>
+                                    <td class="p-3">March 17, 2024, 4:31 a.m.</td>
+                                    <td class="p-3"><a class="btn btn-md btn-outline-info" href="/category/6/update/"><i class="bi bi-pencil-square"></i></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pagination mt-3 row">
+                            <div class="col-12 my-1">
+                                Trang 1 trên tổng 1 trang.
+                            </div>
+                            <div class="col-12">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        
+                
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                
+                                        
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--end container-->
+
+                @@include("partials/footer.html")
+            </main>
+            <!--End page-content" -->
+        </div>
+        <!-- page-wrapper -->
+
+        @@include("partials/offcanvas-right.html")
+        
+        <!-- javascript -->
+        @@include("partials/vendor-scripts.html")
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <!-- Main Js -->
+        <script src="assets/js/plugins.init.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+
+</html>
