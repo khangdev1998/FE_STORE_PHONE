@@ -1,0 +1,46 @@
+.card-item {
+  border-radius: 16px;
+  border: 2px solid $secondary-color;
+  background: $secondary-color;
+  box-shadow: 0px 0px 32px 0px rgba(162, 173, 185, 0.2);
+  width: 100%;
+  padding: 24px;
+  backdrop-filter: blur(20px);
+  background-image: linear-gradient(to bottom right, #ffc145, $primary-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    h2 {
+      color: #fffffb;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: calc(28 / 20);
+      letter-spacing: -0.2px;
+    }
+    &-btn {
+      border-radius: 100rem;
+      border: 1px solid #fffffb;
+      @include size(48px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: opacity 0.1s linear;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

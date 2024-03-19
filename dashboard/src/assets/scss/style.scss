@@ -1,0 +1,10 @@
+@import "mixin";
+@import "variables";
+@import "global";
+
+// Main Page
+@import "components/sidebar.scss";
+@import "components/header.scss";
+@import "components/card-item.scss";
+@import "components/product.scss";
+@import "components/product-table.scss";

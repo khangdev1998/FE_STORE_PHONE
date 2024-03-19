@@ -1,0 +1,26 @@
+$(document).ready(function () {
+  // Toggle dropdown search
+  $("#dropdownMenuButton").click(function (event) {
+    $(this).next("ul").toggle();
+    event.stopPropagation();
+  });
+  $(document).click(function () {
+    $(".header-search__dropdown ul").hide();
+  });
+
+  // Rút gọn sidebar
+  let isSidebarCollapsed = false;
+  $(".sidebar-toggle").click(function () {
+    $(".sidebar-list li a span").toggle();
+
+    if (!isSidebarCollapsed) {
+      $(".wrapper").css("grid-template-columns", "0fr 1fr");
+      $(".sidebar-toggle i").addClass("bi bi-chevron-right");
+      isSidebarCollapsed = true;
+    } else {
+      $(".wrapper").removeAttr("style");
+      $(".sidebar-toggle i").removeClass("bi bi-chevron-right");
+      isSidebarCollapsed = false;
+    }
+  });
+});

@@ -1,0 +1,134 @@
+.header {
+  padding: 20px 25px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &-logo {
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      @include size(100%);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.7),
+        transparent
+      );
+      transform: skewX(-25deg);
+      animation: lightRay 5s infinite;
+    }
+    @keyframes lightRay {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  }
+  &-search {
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid #a2adb9;
+    background-color: #fffffb;
+    display: flex;
+    align-items: center;
+    width: clamp(30rem, -0.909rem + 48.295vw, 35.313rem);
+    height: 45px;
+    &__wrapper {
+      padding: 12px 16px;
+    }
+    &__dropdown {
+      flex-shrink: 0;
+      border-right: 1.8px solid #a2adb9;
+      padding-right: 16px;
+      button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: $dark-color;
+        font-size: 14px;
+        line-height: 20 / 14;
+        font-weight: 400;
+      }
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 28%;
+        background-color: #fffffb;
+        border-radius: 6px;
+        border: 1px solid #a2adb9;
+        padding: 8px 16px;
+        z-index: 1;
+        display: none;
+        li a {
+          text-decoration: none;
+          color: $dark-color;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: calc(20 / 14);
+          display: block;
+          padding: 10px 0;
+        }
+      }
+    }
+    &__field {
+      font-family: inherit;
+      outline: none;
+      border: none;
+      color: #a2adb9;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: calc(20 / 14);
+    }
+    &__btn {
+      background: #be232b;
+      height: 100%;
+      width: 50px;
+      border-radius: 0 6px 6px 0;
+      flex-shrink: 0;
+      transition: opacity 0.1s linear;
+    }
+    &__btn:hover {
+      opacity: 0.8;
+    }
+  }
+  &-account {
+    display: flex;
+    gap: 16px;
+    &__btn {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: calc(20 / 14);
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid $primary-color;
+      background-color: transparent;
+      transition: opacity 0.2s linear;
+    }
+    &__btn:hover {
+      opacity: 0.8;
+    }
+    &__btn--login {
+      color: #fffffb;
+      background-color: $primary-color;
+    }
+    &__btn--register {
+      color: $primary-color;
+    }
+  }
+  @include maxWidth(599px) {
+    &-search {
+      width: 100%;
+      &__dropdown {
+        ul {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
