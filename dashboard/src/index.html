@@ -2,9 +2,14 @@
 
 <!-- ======= Start Header ======= -->
 <header class="header d-flex flex-lg-row flex-column align-items-center gap-3">
-  <a href="#!" class="header-logo">
-    <img src="assets/images/logo.svg" alt="this-is-icon" />
-  </a>
+  <div class="header-logo">
+    <button class="header-logo__bars">
+      <img src="assets/images/side-menu.svg" alt="this-is-icon" />
+    </button>
+    <a href="#!" class="header-logo__the100">
+      <img src="assets/images/logo.svg" alt="this-is-icon" />
+    </a>
+  </div>
   <div
     class="ms-lg-auto d-flex flex-lg-row flex-column align-items-center gap-3"
   >
@@ -820,9 +825,4 @@
   <!-- ======= End Main ======= -->
 </div>
 <!-- ======= End Wrapper ======= -->
-
-<!-- ======= Button Toggle Mobile Sidebar ======= -->
-<button id="sidebar-btn-mobile">
-  <i class="bi bi-arrow-right-square"></i>
-</button>
 @@include('./partials/footer-scripts.html')
