@@ -9,18 +9,6 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  &--first {
-    background-image: url("/assets/images/card-item1.svg");
-  }
-  &--second {
-    background-image: url("/assets/images/card-item2.svg");
-  }
-  &--third {
-    background-image: url("/assets/images/card-item3.svg");
-  }
-  &--fourth {
-    background-image: url("/assets/images/card-item4.svg");
-  }
   &__content {
     display: flex;
     flex-direction: column;
