@@ -1,16 +1,26 @@
 .card-item {
   border-radius: 16px;
-  border: 2px solid $secondary-color;
-  background: $secondary-color;
-  box-shadow: 0px 0px 32px 0px rgba(162, 173, 185, 0.2);
   width: 100%;
   padding: 24px;
-  backdrop-filter: blur(20px);
-  background-image: linear-gradient(to bottom right, #ffc145, $primary-color);
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &--first {
+    background-image: url("/assets/images/card-item1.svg");
+  }
+  &--second {
+    background-image: url("/assets/images/card-item2.svg");
+  }
+  &--third {
+    background-image: url("/assets/images/card-item3.svg");
+  }
+  &--fourth {
+    background-image: url("/assets/images/card-item4.svg");
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -37,10 +47,5 @@
         opacity: 0.8;
       }
     }
-  }
-  &__image {
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 }
