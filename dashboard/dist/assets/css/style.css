@@ -431,6 +431,18 @@ ul {
   background-position: center center;
   background-size: cover;
 }
+.card-item--first {
+  background-image: url("../../assets/images/card-item1.svg");
+}
+.card-item--second {
+  background-image: url("../../assets/images/card-item2.svg");
+}
+.card-item--third {
+  background-image: url("../../assets/images/card-item3.svg");
+}
+.card-item--fourth {
+  background-image: url("../../assets/images/card-item4.svg");
+}
 .card-item__content {
   display: -webkit-box;
   display: -ms-flexbox;
