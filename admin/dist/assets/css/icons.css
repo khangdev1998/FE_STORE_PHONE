@@ -23502,8 +23502,8 @@ File: Icons Css File
 }
 
 .mdi-rotate-45:before {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .mdi-rotate-90 {
@@ -23526,8 +23526,8 @@ File: Icons Css File
 }
 
 .mdi-rotate-90:before {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .mdi-rotate-135 {
@@ -23550,8 +23550,8 @@ File: Icons Css File
 }
 
 .mdi-rotate-135:before {
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .mdi-rotate-180 {
@@ -23574,8 +23574,8 @@ File: Icons Css File
 }
 
 .mdi-rotate-180:before {
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .mdi-rotate-225 {
@@ -23598,8 +23598,8 @@ File: Icons Css File
 }
 
 .mdi-rotate-225:before {
-  -webkit-transform: rotate(-225deg);
-  transform: rotate(-225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
 }
 
 .mdi-rotate-270 {
@@ -23622,8 +23622,8 @@ File: Icons Css File
 }
 
 .mdi-rotate-270:before {
-  -webkit-transform: rotate(-270deg);
-  transform: rotate(-270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .mdi-rotate-315 {
@@ -23646,8 +23646,8 @@ File: Icons Css File
 }
 
 .mdi-rotate-315:before {
-  -webkit-transform: rotate(-315deg);
-  transform: rotate(-315deg);
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
 }
 
 .mdi-flip-h:before {
@@ -23677,8 +23677,8 @@ File: Icons Css File
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(-359deg);
-    transform: rotate(-359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 @keyframes mdi-spin {
@@ -23687,10 +23687,11 @@ File: Icons Css File
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(-359deg);
-    transform: rotate(-359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
+/*# sourceMappingURL=materialdesignicons.css.map */
 /*!
  * Tabler Icons 1.63.0 by tabler - https://tabler.io
  * License - https://github.com/tabler/tabler-icons/blob/master/LICENSE
@@ -30594,7 +30595,5 @@ File: Icons Css File
 }
 
 .ti-zoom-question:before {
-  content: "\edeb";
-}ion:before {
   content: "\edeb";
 }
