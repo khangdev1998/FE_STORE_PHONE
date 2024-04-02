@@ -11,11 +11,20 @@ function loadSuppliers() {
       addDeleteEventListeners();
     },
     error: function () {
-      console.error("The request encountered an error.");
+      createErrorNotify(
+        "Đã xảy ra lỗi khi tải dữ liệu. Vui lòng kiểm tra kết nối của bạn và thử lại."
+      );
     },
   });
 }
 loadSuppliers();
+
+function createErrorNotify(errorMessage) {
+  const errorNotificationHTML = `
+    <span>${errorMessage}</span><i class="ms-1 fs-5 error-icon bi bi-exclamation-triangle"></i>
+  `;
+  $("#error-notification").removeClass("d-none").html(errorNotificationHTML);
+}
 
 function createTableRow(supplier, index) {
   return `
@@ -124,7 +133,6 @@ $("#saveChangesButton").on("click", function () {
     data: JSON.stringify(supplierData),
     success: function (newSupplier) {
       loadSuppliers();
-      console.log(newSupplier);
       $("#createSupplierModal").modal("hide");
       createToastMessage(`Nhà cung cấp ${newSupplier.name} đã được thêm`);
     },
@@ -160,9 +168,9 @@ function createToastMessage(message) {
 }
 
 $("#createSupplierModal").on("show.bs.modal", function (e) {
-  $("#id_name").val("");
-  $("#id_address").val("");
-  $("#id_description").val("");
+  $("#id_name").val("").removeClass("is-invalid");
+  $("#id_address").val("").removeClass("is-invalid");
+  $("#id_description").val("").removeClass("is-invalid");
   $("#flexSwitchCheckChecked").prop("checked", true);
 });
 
@@ -239,31 +247,6 @@ $("#updateChangesButton").on("click", function () {
     error: function (xhr, status, error) {
       // Xử lý lỗi từ server
       createToastMessage("Có lỗi xảy ra khi cập nhật nhà cung cấp.");
-    },
-  });
-});
-
-$("#updateChangesButton").on("click", function () {
-  var supplierId = $(this).data("supplierId");
-  var supplierData = {
-    name: $("#edit_id_name").val(),
-    address: $("#edit_id_address").val(),
-    description: $("#edit_id_description").val(),
-    status: $("#edit_flexSwitchCheckChecked").is(":checked"),
-  };
-
-  $.ajax({
-    url: "https://the100.vn/api/supplier?supplier_id=" + supplierId,
-    method: "PUT",
-    contentType: "application/json",
-    data: JSON.stringify(supplierData),
-    success: function (response) {
-      $("#editSupplierModal").modal("hide");
-      loadSuppliers();
-      createToastMessage("Nhà cung cấp đã được cập nhật thành công.");
-    },
-    error: function (xhr, status, error) {
-      alert("Có lỗi xảy ra khi cập nhật nhà cung cấp.");
     },
   });
 });
