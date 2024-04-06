@@ -29,6 +29,10 @@ body {
   font-family: "Inter", sans-serif;
   color: $dark-color;
 }
+::selection {
+  background-color: $primary-color;
+  color: $light-color;
+}
 button {
   background-color: transparent;
   border: none;
@@ -36,6 +40,35 @@ button {
 }
 ul {
   list-style: none;
+}
+.logo {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      @include size(100%);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.7),
+        transparent
+      );
+      transform: skewX(-25deg);
+      animation: lightRay 5s infinite;
+    }
+    @keyframes lightRay {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
 }
 .box-content {
   border-radius: 16px;
@@ -92,7 +125,7 @@ ul {
   font-size: 18px;
   text-transform: uppercase;
   @include maxWidth(374px) {
-  display: none;
+    display: none;
   }
 }
 .no-scroll {
@@ -124,4 +157,39 @@ ul {
   &--half {
     padding-bottom: 48.25%;
   }
+}
+.homepage-title {
+  color: $dark-color;
+  font-size: clamp(1.75rem, 1.398rem + 1.127vw, 2.75rem);
+  font-weight: 600;
+  line-height: 44px;
+}
+.homepage-readmore {
+  color: #be232b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: clamp(0.938rem, -0.999rem + 7.289vw, 2.5rem);
+  text-decoration: none;
+  padding: 12px 24px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  transition: all 0.3s ease;
+  border-radius: 100rem;
+  &:hover {
+    color: $light-color;
+    background-color: $primary-color;
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+.homepage-desc {
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
 }

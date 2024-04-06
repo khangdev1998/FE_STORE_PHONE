@@ -1,0 +1,26 @@
+#back-to-top {
+  --size-button: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 80;
+  border: none;
+  outline: none;
+  background-color: $primary-color;
+  color: $light-color;
+  cursor: pointer;
+  width: var(--size-button);
+  height: var(--size-button);
+  line-height: var(--size-button);
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include maxWidth(599px) {
+    --size-button: 45px;
+    font-size: 18px;
+  }
+}

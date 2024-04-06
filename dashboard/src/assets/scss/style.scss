@@ -2,9 +2,22 @@
 @import "variables";
 @import "global";
 
-// Main Page
+// Dashboard Page
 @import "components/sidebar.scss";
 @import "components/header.scss";
 @import "components/card-item.scss";
 @import "components/product.scss";
 @import "components/product-table.scss";
+
+// HomePage
+@import "components/homeHeader.scss";
+@import "components/search.scss";
+@import "components/banner.scss";
+@import "components/category.scss";
+@import "components/business.scss";
+@import "components/homepageProduct.scss";
+@import "components/sell.scss";
+@import "components/faq.scss";
+@import "components/experience.scss";
+@import "components/back-top.scss";
+@import "components/footer.scss";
