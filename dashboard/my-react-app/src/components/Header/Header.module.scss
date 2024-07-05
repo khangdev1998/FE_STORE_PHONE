@@ -1,0 +1,126 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+  padding: 20px 25px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &Logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    &Bars {
+      display: none;
+      img {
+        max-width: 40px;
+      }
+    }
+  }
+  &Search {
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid #a2adb9;
+    background-color: #fffffb;
+    display: flex;
+    align-items: center;
+    width: clamp(30rem, -0.909rem + 48.295vw, 35.313rem);
+    height: 45px;
+    &Wrapper {
+      padding: 12px 16px;
+    }
+    &Dropdown {
+      flex-shrink: 0;
+      border-right: 1.8px solid #a2adb9;
+      padding-right: 16px;
+      button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: $dark-color;
+        font-size: 14px;
+        line-height: 20 / 14;
+        font-weight: 400;
+      }
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 28%;
+        background-color: #fffffb;
+        border-radius: 6px;
+        border: 1px solid #a2adb9;
+        padding: 8px 16px;
+        z-index: 1;
+        display: none;
+        li a {
+          text-decoration: none;
+          color: $dark-color;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: calc(20 / 14);
+          display: block;
+          padding: 10px 0;
+        }
+      }
+    }
+    &Field {
+      font-family: inherit;
+      outline: none;
+      border: none;
+      color: #a2adb9;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: calc(20 / 14);
+    }
+    &Btn {
+      background: #be232b;
+      height: 100%;
+      width: 50px;
+      border-radius: 0 6px 6px 0;
+      flex-shrink: 0;
+      transition: opacity 0.1s linear;
+    }
+    &Btn:hover {
+      opacity: 0.8;
+    }
+  }
+  &Account {
+    display: flex;
+    gap: 16px;
+    &Btn {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: calc(20 / 14);
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid $primary-color;
+      background-color: transparent;
+      transition: opacity 0.2s linear;
+      &:hover {
+        opacity: 0.8;
+      }
+      &Login {
+        color: #fffffb;
+        background-color: $primary-color;
+      }
+      &Register {
+        color: $primary-color;
+      }
+    }
+  }
+  @include maxWidth(991px) {
+    &LogoBars {
+      display: block;
+    }
+  }
+  @include maxWidth(599px) {
+    &Search {
+      width: 100%;
+      &Dropdown {
+        ul {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
