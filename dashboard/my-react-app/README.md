@@ -1,4 +1,4 @@
-# Dự Án Dashboard
+# Trang Dashboard
 
 Đây là một ứng dụng React sử dụng Vite để phát triển nhanh và tối ưu hóa. Làm theo các hướng dẫn dưới đây để cài đặt và chạy dự án trên máy tính của bạn.
 
@@ -11,11 +11,12 @@
 
   ## Bắt Đầu
 
-  ### 1. Clone Repository
+  ### 1. Clone Repository và trỏ đúng thư mục dự án
 
   ```sh
   git clone <repository_url>
-        cd dashboard/my-react-app
+  
+  cd dashboard/my-react-app
   ```
 
   ### 2. Cài Đặt Các Phụ Thuộc
