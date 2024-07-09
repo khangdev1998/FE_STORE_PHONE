@@ -5,13 +5,13 @@ import sideMenu from "../../assets/images/side-menu.svg";
 import downArrow from "../../assets/images/down-arrow.svg";
 import glass from "../../assets/images/glass.svg";
 
-const Header = () => {
+const Header = ({btnShowSidebar}) => {
   return (
     <div
       className={`${styles.header} d-flex flex-lg-row flex-column align-items-center gap-3`}
     >
       <div className={styles.headerLogo}>
-        <button className={`${styles.headerLogoBars}`}>
+        <button className={`${styles.headerLogoBars}`} onClick={btnShowSidebar}>
           <img src={sideMenu} alt="this-is-icon" />
         </button>
         <a href="#!" className="logo">

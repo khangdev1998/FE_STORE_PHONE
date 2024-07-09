@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom"; // Sử dụng NavLink từ react-router-dom
 import styles from "./Sidebar.module.scss";
 import sidebarIcon1 from "../../assets/images/sidebar-icon1.svg";
 import sidebarIcon2 from "../../assets/images/sidebar-icon2.svg";
@@ -10,61 +11,90 @@ import sidebarIcon7 from "../../assets/images/sidebar-icon7.svg";
 import sidebarIcon8 from "../../assets/images/sidebar-icon8.svg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Sidebar = () => {
+const Sidebar = ({ isCollapsed, toggleSidebar, isSidebarOpen }) => {
   return (
-    <div className={styles.sidebar}>
+    <div className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ""}`}>
       <ul className={styles.sidebarList}>
         <li>
-          <a href="#!">
+          <NavLink
+            exact
+            to="/"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon1} alt="this-is-icon" />
-            <span>Bảng điều khiển</span>
-          </a>
+            {!isCollapsed && <span>Bảng điều khiển</span>}
+          </NavLink>
         </li>
         <li>
-          <a href="#!">
+          <NavLink
+            to="/products"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon2} alt="this-is-icon" />
-            <span>Sản phẩm</span>
-          </a>
+            {!isCollapsed && <span>Sản phẩm</span>}
+          </NavLink>
         </li>
         <li>
-          <a href="#!">
+          <NavLink
+            to={"/suppliers"}
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon3} alt="this-is-icon" />
-            <span>Nhà cung cấp</span>
-          </a>
+            {!isCollapsed && <span>Nhà cung cấp</span>}
+          </NavLink>
         </li>
         <li>
-          <a href="#!">
+          <NavLink
+            to={"/wallet"}
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon4} alt="this-is-icon" />
-            <span>Ví</span>
-          </a>
+            {!isCollapsed && <span>Ví</span>}
+          </NavLink>
         </li>
         <li>
-          <a href="#!">
+          <NavLink
+            to={"/blog"}
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon5} alt="this-is-icon" />
-            <span> Blog </span>
-          </a>
+            {!isCollapsed && <span>Blog</span>}
+          </NavLink>
         </li>
         <li>
-          <a href="#!">
+          <NavLink
+            to={"/pricing"}
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon6} alt="this-is-icon" />
-            <span> Bảng giá </span>
-          </a>
+            {!isCollapsed && <span>Bảng giá</span>}
+          </NavLink>
         </li>
         <li>
-          <a href="#!">
+          <NavLink
+            to={"/information"}
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon7} alt="this-is-icon" />
-            <span>Thông tin</span>
-          </a>
+            {!isCollapsed && <span>Thông tin</span>}
+          </NavLink>
         </li>
         <li>
-          <a href="#!">
+          <NavLink
+            to={"/support"}
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <img src={sidebarIcon8} alt="this-is-icon" />
-            <span>Hỗ trợ</span>
-          </a>
+            {!isCollapsed && <span>Hỗ trợ</span>}
+          </NavLink>
         </li>
       </ul>
-      <button className={styles.sidebarToggle}>
-        <i className="bi bi-chevron-left"></i>
+      <button className={styles.sidebarToggle} onClick={toggleSidebar}>
+        <i
+          className={`bi ${
+            isCollapsed ? "bi-chevron-right" : "bi-chevron-left"
+          }`}
+        ></i>
       </button>
     </div>
   );
