@@ -1,8 +1,0 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="box-archive">
-<g id="Icon">
-<path d="M9 13C9 12.4477 9.44772 12 10 12H14C14.5523 12 15 12.4477 15 13C15 13.5523 14.5523 14 14 14H10C9.44772 14 9 13.5523 9 13Z" fill="#FF6B6C"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1 4C1 2.89543 1.89543 2 3 2H21C22.1046 2 23 2.89543 23 4V8C23 9.10457 22.1046 10 21 10V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V10C1.89543 10 1 9.10457 1 8V4ZM3 8H21V4H3V8ZM19 10H5V20H19V10Z" fill="#5B5F97"/>
-</g>
-</g>
-</svg>
