@@ -1,17 +1,11 @@
 import React from "react";
-import styles from "../Gallery/Gallery.module.scss";
-import arrowRight from "../../assets/images/arrow-right.svg";
+import styles from "./Gallery.module.scss";
+import TitleWithLink from "../../sections/TitleWithLink/TitleWithLink";
 
 const Gallery = () => {
   return (
     <div className="box-content">
-      <div className="d-flex flex-sm-row flex-column justify-content-between align-items-center gap-2">
-        <h2 className="title">Tài trợ</h2>
-        <a className="read-more" href="#!">
-          Xem tất cả
-          <img src={arrowRight} alt="this-is-icon" />
-        </a>
-      </div>
+      <TitleWithLink title="Tài trợ" />
 
       <div className={styles.gallery}>
         <img

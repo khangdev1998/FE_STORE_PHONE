@@ -181,31 +181,31 @@ export const newSuppliers = {
   data: [
     {
       id: 1,
-      image: avatar1,
+      image: avatar2,
       name: "Cô gái bán giò",
       category: "Thời trang",
     },
     {
       id: 2,
-      image: avatar1,
+      image: avatar2,
       name: "Cô nàng chân ngắn",
       category: "Hàng tiêu dùng",
     },
     {
       id: 3,
-      image: avatar1,
+      image: avatar2,
       name: "Sao vàng 5 cánh",
       category: "Thời trang",
     },
     {
       id: 4,
-      image: avatar1,
+      image: avatar2,
       name: "Bán chuối chiên",
       category: "Dụng cụ nhà cửa",
     },
     {
       id: 5,
-      image: avatar1,
+      image: avatar2,
       name: "Sản xuất hàng hiệu",
       category: "Công nghệ",
     },

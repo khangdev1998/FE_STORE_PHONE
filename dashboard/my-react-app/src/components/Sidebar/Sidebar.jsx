@@ -17,7 +17,6 @@ const Sidebar = ({ isCollapsed, toggleSidebar, isSidebarOpen }) => {
       <ul className={styles.sidebarList}>
         <li>
           <NavLink
-            exact
             to="/"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >

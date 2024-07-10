@@ -1,7 +1,7 @@
 import React from "react";
 import CardList from "./sections/CardList/CardList";
 import SellingProducts from "./sections/SellingProducts/SellingProducts";
-import TableSection from "../../components/TableSection/TableSection";
+import TableSection from "./sections/TableSection/TableSection";
 import {
   discountProducts,
   topSuppliers,
@@ -9,11 +9,11 @@ import {
   newProducts,
   newSuppliers,
 } from "../../data";
-import Gallery from "../../components/Gallery/Gallery";
+import Gallery from "./sections/Gallery/Gallery";
 
 const DashboardPage = () => {
   return (
-    <div>
+    <>
       <CardList />
 
       <SellingProducts />
@@ -68,7 +68,7 @@ const DashboardPage = () => {
           <Gallery />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

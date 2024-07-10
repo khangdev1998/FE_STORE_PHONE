@@ -1,7 +1,7 @@
 import React from "react";
 import MembershipBadge from "../MembershipBadge/MembershipBadge";
 import styles from "./TableSection.module.scss";
-import arrowRight from "../../assets/images/arrow-right.svg";
+import TitleWithLink from "../TitleWithLink/TitleWithLink";
 
 function TableSection({ title, data, columns }) {
   const avatarVariant =
@@ -34,13 +34,7 @@ function TableSection({ title, data, columns }) {
 
   return (
     <div className="box-content">
-      <div className="d-flex flex-sm-row flex-column justify-content-between align-items-center gap-2">
-        <h2 className="title">{title}</h2>
-        <a className="read-more" href="#!">
-          Xem tất cả
-          <img src={arrowRight} alt="this-is-icon" />
-        </a>
-      </div>
+      <TitleWithLink title={title} />
       <div className="table-responsive">
         <table className={`${styles.tableList} ${tableClass} mt-4`}>
           <thead>

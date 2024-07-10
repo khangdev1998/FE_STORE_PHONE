@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => {
   };
 
   return (
-    <div>
+    <>
       <Header btnShowSidebar={btnShowSidebar} />
       <div className="wrapper" style={wrapperStyle}>
         <Sidebar
@@ -35,7 +35,7 @@ const MainLayout = ({ children }) => {
         <Overlay isVisible={isSidebarOpen} onClick={closeSidebar} />
         <div className="p-md-4 p-2">{children}</div>
       </div>
-    </div>
+    </>
   );
 };
 
