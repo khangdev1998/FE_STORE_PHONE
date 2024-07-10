@@ -1,5 +1,7 @@
 # Trang Dashboard Bán Hàng
 
+![View](https://github.com/The100vn/THE_100VN_BAN_HANG/assets/170594094/e87a345f-0691-4400-b158-2f5f52cedf2c)
+
 Đây là một ứng dụng React sử dụng Vite để phát triển nhanh và tối ưu hóa. Làm theo các hướng dẫn dưới đây để cài đặt và chạy dự án trên máy tính của bạn.
 
 ## Yêu Cầu
