@@ -1,0 +1,33 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins.scss";
+
+.listProduct {
+  padding-block: 48px;
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+    h1 {
+      font-size: 28px;
+      line-height: 30px;
+      color: $primary-text;
+      font-weight: bold;
+    }
+    a {
+      background-color: #e4f2ff;
+      padding: 8px 15px;
+      border-radius: 6px;
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 20px;
+      transition: all 0.24s ease;
+      &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+      }
+    }
+  }
+}

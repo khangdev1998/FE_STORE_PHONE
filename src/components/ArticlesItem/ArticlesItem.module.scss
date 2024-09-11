@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+@import "../../styles/mixins.scss";
+
+.articles {
+  &Item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &Image {
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      img {
+        @include size(100%);
+        object-fit: cover;
+        transition: all 0.24s cubic-bezier(0.39, 0.575, 0.565, 1);
+      }
+      &:hover img {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+    &Content {
+      a,
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+      a {
+        color: $primary-text;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        transition: color 0.25s ease;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      p {
+        margin-top: 9px;
+        color: #959595;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+  }
+}

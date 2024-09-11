@@ -1,124 +1,300 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-.header {
-  padding: 20px 25px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  &Logo {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    &Bars {
-      display: none;
-      img {
-        max-width: 40px;
-      }
-    }
-  }
-  &Search {
-    position: relative;
-    border-radius: 6px;
-    border: 1px solid #a2adb9;
-    background-color: #fffffb;
+.topbar {
+  background-color: #0068c8;
+  padding: 10px 15px;
+  &Contact {
+    color: $light-color;
     display: flex;
     align-items: center;
-    width: clamp(30rem, -0.909rem + 48.295vw, 35.313rem);
-    height: 45px;
-    &Wrapper {
-      padding: 12px 16px;
-    }
-    &Dropdown {
-      flex-shrink: 0;
-      border-right: 1.8px solid #a2adb9;
-      padding-right: 16px;
-      button {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        color: $dark-color;
-        font-size: 14px;
-        line-height: 20 / 14;
-        font-weight: 400;
-      }
-      ul {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 28%;
-        background-color: #fffffb;
-        border-radius: 6px;
-        border: 1px solid #a2adb9;
-        padding: 8px 16px;
-        z-index: 1;
-        display: none;
-        li a {
-          text-decoration: none;
-          color: $dark-color;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: calc(20 / 14);
-          display: block;
-          padding: 10px 0;
-        }
-      }
-    }
-    &Field {
-      font-family: inherit;
-      outline: none;
-      border: none;
-      color: #a2adb9;
+    gap: 25px;
+    &Link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: $light-color;
       font-size: 14px;
       font-weight: 400;
-      line-height: calc(20 / 14);
-    }
-    &Btn {
-      background: #be232b;
-      height: 100%;
-      width: 50px;
-      border-radius: 0 6px 6px 0;
-      flex-shrink: 0;
-      transition: opacity 0.1s linear;
-    }
-    &Btn:hover {
-      opacity: 0.8;
-    }
-  }
-  &Account {
-    display: flex;
-    gap: 16px;
-    &Btn {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: calc(20 / 14);
-      padding: 12px 24px;
-      border-radius: 6px;
-      border: 1px solid $primary-color;
-      background-color: transparent;
-      transition: opacity 0.2s linear;
+      text-decoration: none;
+      transition: opacity 0.25s ease;
       &:hover {
         opacity: 0.8;
       }
-      &Login {
-        color: #fffffb;
-        background-color: $primary-color;
-      }
-      &Register {
-        color: $primary-color;
+    }
+  }
+  &Social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    &Link {
+      color: $light-color;
+      font-size: 16px;
+      transition: opacity 0.25s ease;
+      &:hover {
+        opacity: 0.8;
       }
     }
   }
-  @include maxWidth(991px) {
-    &LogoBars {
-      display: block;
-    }
-  }
-  @include maxWidth(599px) {
-    &Search {
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-block: 30px;
+  &Logo {
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    max-width: clamp(9.625rem, 6.188rem + 14.667vw, 11.688rem);
+    width: 100%;
+    img {
       width: 100%;
-      &Dropdown {
-        ul {
-          width: 100%;
+      height: auto;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      @include size(100%);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.7),
+        transparent
+      );
+      transform: skewX(-25deg);
+      animation: lightRay 5s infinite;
+    }
+    @keyframes lightRay {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  }
+  &List {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    list-style: none;
+    li {
+      a {
+        color: $primary-text;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 22px;
+        transition: color 0.25s ease;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        &:hover {
+          color: $primary-color;
+          text-decoration: urderline;
+        }
+      }
+    }
+  }
+  &Controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    &Search {
+      &:hover {
+        color: $primary-color;
+        transition: color 0.25s ease;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+    &User {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      &:hover > * {
+        color: $primary-color;
+        transition: color 0.25s ease;
+      }
+      span {
+        color: $primary-text;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+    &Cart {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-align: center;
+      border-radius: 6px;
+      border: 1.5px solid $primary-color;
+      padding: 8px 10px;
+      transition: all 0.25s ease;
+      color: #0068c8;
+      &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+      }
+      span {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// Search Modal
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #dadada;
+  border-radius: 100rem;
+  padding: 6px 6px 6px 14px;
+  transition: all 0.25s ease;
+  &:focus-within {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(14, 110, 253, 0.25);
+  }
+  input {
+    font-family: inherit;
+    @include size(100%);
+    border: none;
+    outline: 0;
+    color: $primary-text;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    &::placeholder {
+      color: #c6c6c6;
+    }
+  }
+  button {
+    border-radius: 100rem;
+    @include size(35px);
+    background-color: #dadada;
+    transition: opacity 0.1s ease;
+    flex-shrink: 0;
+    &:hover {
+      opacity: 0.8;
+    }
+    i {
+      color: $primary-text;
+      font-size: 15px;
+    }
+  }
+}
+
+//  Cart Modal
+.modal-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: clamp(18.75rem, 7.134rem + 43.732vw, 28.125rem);
+  height: 100%;
+  background-color: white;
+  border-radius: 16px;
+  z-index: 150;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  &.show {
+    display: block;
+    transform: translateX(0);
+  }
+  .header-notification {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    .caption {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $primary-text;
+    }
+    img {
+      width: 22px;
+    }
+  }
+  .body-notification {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: calc(100% - 64px);
+    overflow-y: auto;
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 20px clamp(0.938rem, 0.241rem + 2.624vw, 1.5rem);
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: rgb(248, 174, 149, 0.4);
+      }
+      img {
+        border-radius: 8px;
+        object-fit: cover;
+        @include size(48px);
+        flex-shrink: 0;
+      }
+      &-content {
+        .title {
+          color: $primary-text;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .time {
+          color: #484848;
+          font-size: 12.5px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+        .desc {
+          font-weight: 400;
+          font-size: 12.5px;
+          line-height: 19px;
+          color: #484848;
+          b {
+            font-weight: 700;
+          }
+        }
+        .btn-main,
+        .btn-secondary {
+          padding: 8px 12px;
+          border-radius: 6px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          text-align: center;
+          display: inline-block;
+        }
+        .btn-main {
+          background-color: #575fcc;
+          color: $light-color;
+        }
+        .btn-secondary {
+          color: $primary-color;
+          background-color: #dae5fb;
         }
       }
     }

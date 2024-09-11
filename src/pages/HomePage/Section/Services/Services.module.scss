@@ -1,0 +1,33 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
+
+.services {
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  padding: 25px 20px;
+  &Item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid #dadada;
+    img {
+      @include size(45px);
+      object-fit: contain;
+    }
+    &Content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      h4 {
+        font-size: 15px;
+        color: $primary-text;
+        line-height: 20px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        color: $primary-text;
+      }
+    }
+  }
+}
