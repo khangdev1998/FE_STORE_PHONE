@@ -87,6 +87,10 @@
     gap: 14px;
     list-style: none;
     li {
+      &.active a {
+        color: $primary-color;
+        pointer-events: none;
+      }
       a {
         color: $primary-text;
         font-weight: bold;
@@ -100,6 +104,9 @@
         &:hover {
           color: $primary-color;
           text-decoration: urderline;
+        }
+        &.active {
+          color: $primary-color;
         }
       }
     }

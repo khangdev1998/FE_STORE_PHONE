@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import Overlay from "../Overlay/Overlay";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import LoginCard from "../Auth/LoginCard";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const location = useLocation(); 
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -25,6 +26,11 @@ const Header = () => {
       document.body.classList.remove("no-scroll");
     };
   }, [isSidebarOpen]);
+
+  // Hàm kiểm tra xem đường dẫn hiện tại có khớp với đường dẫn của link không
+  const isActiveLink = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <>
@@ -73,19 +79,19 @@ const Header = () => {
             />
           </Link>
           <ul className={styles.headerList}>
-            <li>
+          <li className={isActiveLink("/") ? styles.active : ""}>
               <Link to="/">Trang chủ</Link>
             </li>
-            <li>
+            <li className={isActiveLink("/list-phone") ? styles.active : ""}>
               <Link to="/list-phone">Điện thoại</Link>
             </li>
-            <li>
+            <li className={isActiveLink("/list-blog") ? styles.active : ""}>
               <Link to="/list-blog">Bài viết</Link>
             </li>
-            <li>
+            <li className={isActiveLink("/introduce") ? styles.active : ""}>
               <Link to="/introduce">Giới thiệu</Link>
             </li>
-            <li>
+            <li className={isActiveLink("/contact") ? styles.active : ""}>
               <Link to="/contact">Liên hệ</Link>
             </li>
           </ul>
