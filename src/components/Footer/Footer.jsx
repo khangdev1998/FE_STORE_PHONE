@@ -1,8 +1,17 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import { Link } from "react-router-dom";
+import YouTube from "react-youtube";
 
 const Footer = () => {
+  const opts = {
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      rel: 0,
+      modestbranding: 1,
+    },
+  };
   return (
     <div className="container">
       <div className={styles.footer}>
@@ -89,19 +98,18 @@ const Footer = () => {
           </div>
           <div className="col-3">
             <h1 className={styles.footerTitle}>Trailer Video</h1>
-            <div className="ratio ratio-4x3">
-              <iframe
-                src="https://www.youtube.com/embed/GDlkCkcIqTs?si=71dSAMPAZpqJEyvD"
-                title="Video"
-                allowFullScreen
-              ></iframe>
+            <div className={styles.footerVideo}>
+              <YouTube
+                videoId="GDlkCkcIqTs"
+                opts={opts}
+              />
             </div>
           </div>
         </div>
       </div>
 
       <div className={styles.copyright}>
-        <span> © 2024 XT Mobile. All rights reserved</span>
+        <span>© 2024 XT Mobile. All rights reserved</span>
         <a
           className={styles.copyrightCertification}
           href="https://moit.gov.vn"
