@@ -13,11 +13,13 @@ import ListPhonePage from "./pages/ListPhonePage/ListPhonePage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import ListBlogPage from "./pages/ListBlogPage/ListBlogPage";
 import CustomerSupport from "./pages/HomePage/CustomerSupport/CustomerSupport";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* ScrollToTop sẽ hoạt động với mọi route */}
+      <ScrollToTop />
+      <ScrollToTopButton />
       <MainLayout>
         <Suspense fallback={null}>
           <Routes>

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import Overlay from "../Overlay/Overlay";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import LoginCard from "../Auth/LoginCard";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const location = useLocation(); 
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -26,11 +25,6 @@ const Header = () => {
       document.body.classList.remove("no-scroll");
     };
   }, [isSidebarOpen]);
-
-  // Hàm kiểm tra xem đường dẫn hiện tại có khớp với đường dẫn của link không
-  const isActiveLink = (path) => {
-    return location.pathname === path;
-  };
 
   return (
     <>
@@ -79,20 +73,55 @@ const Header = () => {
             />
           </Link>
           <ul className={styles.headerList}>
-          <li className={isActiveLink("/") ? styles.active : ""}>
-              <Link to="/">Trang chủ</Link>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Trang chủ
+              </NavLink>
             </li>
-            <li className={isActiveLink("/list-phone") ? styles.active : ""}>
-              <Link to="/list-phone">Điện thoại</Link>
+            <li>
+              <NavLink
+                to="/list-phone"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Điện thoại
+              </NavLink>
             </li>
-            <li className={isActiveLink("/list-blog") ? styles.active : ""}>
-              <Link to="/list-blog">Bài viết</Link>
+            <li>
+              <NavLink
+                to="/list-blog"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Bài viết
+              </NavLink>
             </li>
-            <li className={isActiveLink("/introduce") ? styles.active : ""}>
-              <Link to="/introduce">Giới thiệu</Link>
+            <li>
+              <NavLink
+                to="/introduce"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Giới thiệu
+              </NavLink>
             </li>
-            <li className={isActiveLink("/contact") ? styles.active : ""}>
-              <Link to="/contact">Liên hệ</Link>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
+              >
+                Liên hệ
+              </NavLink>
             </li>
           </ul>
           <div className={styles.headerControls}>
