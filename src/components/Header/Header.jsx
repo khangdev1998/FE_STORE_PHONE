@@ -28,8 +28,8 @@ const Header = () => {
 
   return (
     <>
-      <div className={`${styles.topbar}`}>
-        <div className="container d-flex align-items-center justify-content-between gap-4">
+      <div className={styles.topbar}>
+        <div className="container d-flex flex-md-row flex-column align-items-center justify-content-between gap-md-4 gap-3">
           <div className={styles.topbarContact}>
             <a href="tel:0123456789" className={styles.topbarContactLink}>
               <i className="bi bi-telephone-fill"></i>
@@ -140,7 +140,7 @@ const Header = () => {
               data-bs-target="#userModal"
             >
               <i className="bi bi-person-fill"></i>
-              <span>Tài khoản</span>
+              <span className="d-sm-block d-none">Tài khoản</span>
             </button>
             <button
               onClick={openSidebar}
@@ -148,7 +148,7 @@ const Header = () => {
               className={styles.headerControlsCart}
             >
               <i className="bi bi-cart3"></i>
-              <span>Giỏ hàng 10</span>
+              <span className="d-sm-block d-none">Giỏ hàng 10</span>
             </button>
           </div>
 

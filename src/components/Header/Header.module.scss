@@ -48,7 +48,7 @@
     position: relative;
     text-decoration: none;
     display: inline-block;
-    max-width: clamp(9.625rem, 6.188rem + 14.667vw, 11.688rem);
+    max-width: clamp(9.375rem, 6.875rem + 3.906vw, 11.563rem);
     width: 100%;
     background-color: #1481e7;
     padding: 8px 10px;
@@ -301,6 +301,42 @@
           background-color: #dae5fb;
         }
       }
+    }
+  }
+}
+// Reponsive All Screen
+@include maxWidth(1199px) {
+  .header {
+    &List {
+      gap: 6px;
+      li a {
+        padding: 8px;
+      }
+    }
+    &Controls {
+      gap: 18px;
+    }
+  }
+}
+@include maxWidth(1023px) {
+  .header {
+    &List {
+      display: none;
+    }
+  }
+}
+@include maxWidth(767px) {
+  .topbar{
+    flex-direction: column;
+  }
+  .header {
+    padding-block: 24px;
+  }
+}
+@include maxWidth(424px) {
+  .topbar{
+    &Contact {
+      display: none;
     }
   }
 }

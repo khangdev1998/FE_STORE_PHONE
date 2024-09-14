@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.readmore {
+  background-color: #e4f2ff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  color: $primary-color;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  transition: all 0.24s ease;
+  &:hover {
+    background-color: $primary-color;
+    color: $light-color;
+  }
+  @include maxWidth(599px) {
+
+   
+  }
+}

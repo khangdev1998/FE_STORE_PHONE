@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const LoginCard = ({ navigate }) => {
   return (
     <>
-      <div className="d-flex justify-content-between gap-3 mb-3">
+      <div className="d-flex flex-sm-row flex-column justify-content-between gap-sm-3 gap-2 mb-3">
         <button className="btn btn-primary w-100 p-2">
           <i className="bi bi-google me-1"></i> Đăng nhập google
         </button>

@@ -46,20 +46,20 @@ const Hero = () => {
         </Slider>
       </div>
       <div className={styles.heroList}>
-        <div className="row g-4">
-          <div className="col-4">
+        <div className="row g-sm-4 g-2">
+          <div className="col-md-4">
             <img
               src="https://cdn2492.cdn-template-4s.com/media/banner/banner-1.webp"
               alt="this-image"
             />
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             <img
               src="https://cdn2492.cdn-template-4s.com/media/banner/banner-2.webp"
               alt="this-image"
             />
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             <img
               src="https://cdn2492.cdn-template-4s.com/media/banner/banner-3.webp"
               alt="this-image"

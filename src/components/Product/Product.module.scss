@@ -82,4 +82,21 @@
       }
     }
   }
+  @include maxWidth(599px) {
+    padding: 14px;
+    &Info {
+      &Name {
+        font-size: 15px;
+        text-align: center;
+      }
+      &Rating,
+      &Price {
+        flex-direction: column;
+      }
+      &Price {
+        gap: 4px;
+        text-align: center;
+      }
+    }
+  }
 }

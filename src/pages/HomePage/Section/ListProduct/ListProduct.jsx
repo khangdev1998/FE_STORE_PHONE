@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ListProduct.module.scss";
 import Product from "../../../../components/Product/Product";
-import { Link } from "react-router-dom";
+import ReadmoreButton from "../../../../components/ReadmoreButton/ReadmoreButton";
 
 const ListProduct = () => {
   return (
@@ -9,18 +9,14 @@ const ListProduct = () => {
       <div className="container">
         <div className={styles.listProductHeader}>
           <h1>Điện thoại</h1>
-
-          <Link to="/list-phone">
-            Xem thêm
-            <i className="bi bi-arrow-right ms-2"></i>
-          </Link>
+          <ReadmoreButton to="/list-phone" text="Xem thêm sản phẩm" />
         </div>
 
-        <div className="row g-4">
+        <div className="row g-md-4 g-3">
           {Array(8)
             .fill(0)
             .map((_, index) => (
-              <div className="col-3" key={index}>
+              <div className="col-xl-3 col-lg-4 col-6" key={index}>
                 <Product />
               </div>
             ))}

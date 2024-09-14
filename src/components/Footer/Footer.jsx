@@ -15,8 +15,8 @@ const Footer = () => {
   return (
     <div className="container">
       <div className={styles.footer}>
-        <div className="row g-5">
-          <div className="col-3">
+        <div className="row g-md-5 g-4">
+          <div className="col-lg-3 col-md-6">
             <h1 className={styles.footerTitle}>Công Ty Cửa Hàng Điện Thoại</h1>
             <p className={styles.footerDesc}>
               <b>XT Mobile</b> đang là một trong những hệ thống phân phối iPhone
@@ -39,7 +39,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-3">
+          <div className="col-lg-3 col-md-6">
             <h1 className={styles.footerTitle}>Top sản phẩm bán chạy</h1>
             <ul className={styles.footerListTag}>
               <li>
@@ -71,7 +71,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-3">
+          <div className="col-lg-3 col-md-6">
             <h1 className={styles.footerTitle}>Hỗ trợ khách hàng</h1>
             <ul className={styles.footerListSupport}>
               <li>
@@ -96,7 +96,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-3">
+          <div className="col-lg-3 col-md-6">
             <h1 className={styles.footerTitle}>Trailer Video</h1>
             <div className={styles.footerVideo}>
               <YouTube
