@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,12 +8,12 @@ const Footer = () => {
       <div className={styles.footer}>
         <div className="row g-5">
           <div className="col-3">
-            <h1 className={styles.footerTitle}>CÔNG TY PHẦN MỀM NHÂN HÒA</h1>
+            <h1 className={styles.footerTitle}>Công Ty Cửa Hàng Điện Thoại</h1>
             <p className={styles.footerDesc}>
-              <b>Phúc Khang Mobile</b> đang là một trong những hệ thống phân
-              phối iPhone quốc tế và chính hãng lớn nhất tại TP.HCM. Với uy tín
-              và kinh nghiệm lâu năm, dịch vụ chuyên nghiệp giúp khách hàng trên
-              toàn lãnh thổ Việt Nam dễ dàng mua sắm các sản phẩm trực tuyến.
+              <b>XT Mobile</b> đang là một trong những hệ thống phân phối iPhone
+              quốc tế và chính hãng lớn nhất tại TP.HCM. Với uy tín và kinh
+              nghiệm lâu năm, dịch vụ chuyên nghiệp giúp khách hàng trên toàn
+              lãnh thổ Việt Nam dễ dàng mua sắm các sản phẩm trực tuyến.
             </p>
             <ul className={styles.footerAddress}>
               <li>
@@ -33,31 +34,31 @@ const Footer = () => {
             <h1 className={styles.footerTitle}>Top sản phẩm bán chạy</h1>
             <ul className={styles.footerListTag}>
               <li>
-                <a href="#!">iPhone 16 Pro Max</a>
+                <Link to="/product-detail">iPhone 16 Pro Max</Link>
               </li>
               <li>
-                <a href="#!">iPhone 16</a>
+                <Link to="/product-detail">iPhone 16</Link>
               </li>
               <li>
-                <a href="#!">iPhone 15 Pro Max</a>
+                <Link to="/product-detail">iPhone 15 Pro Max</Link>
               </li>
               <li>
-                <a href="#!">iPhone 14 Pro</a>
+                <Link to="/product-detail">iPhone 14 Pro</Link>
               </li>
               <li>
-                <a href="#!">iPhone 12 Pro Max</a>
+                <Link to="/product-detail">iPhone 12 Pro Max</Link>
               </li>
               <li>
-                <a href="#!">iPhone 11 Pro Max</a>
+                <Link to="/product-detail">iPhone 11 Pro Max</Link>
               </li>
               <li>
-                <a href="#!">iPhone 11 Pro</a>
+                <Link to="/product-detail">iPhone 11 Pro</Link>
               </li>
               <li>
-                <a href="#!">iPhone XS Max</a>
+                <Link to="/product-detail">iPhone XS Max</Link>
               </li>
               <li>
-                <a href="#!">iPhone 8 Plus</a>
+                <Link to="/product-detail">iPhone 8 Plus</Link>
               </li>
             </ul>
           </div>
@@ -65,41 +66,42 @@ const Footer = () => {
             <h1 className={styles.footerTitle}>Hỗ trợ khách hàng</h1>
             <ul className={styles.footerListSupport}>
               <li>
-                <a href="#">Hướng dẫn mua hàng</a>
+                <Link to="/customer-support">Hướng dẫn mua hàng</Link>
               </li>
               <li>
-                <a href="#">Chính sách thanh toán & giao nhận</a>
+                <Link to="/customer-support">
+                  Chính sách thanh toán & giao nhận
+                </Link>
               </li>
               <li>
-                <a href="#">Chính sách bảo hành</a>
+                <Link to="/customer-support">Chính sách bảo hành</Link>
               </li>
               <li>
-                <a href="#">Chính sách bảo mật thông tin</a>
+                <Link to="/customer-support">Chính sách bảo mật thông tin</Link>
               </li>
               <li>
-                <a href="#">Chính sách đổi hàng</a>
+                <Link to="/customer-support">Chính sách đổi hàng</Link>
               </li>
               <li>
-                <a href="#">Cam kết hoàn tiền 100%</a>
+                <Link to="/customer-support">Cam kết hoàn tiền 100%</Link>
               </li>
             </ul>
           </div>
-
           <div className="col-3">
             <h1 className={styles.footerTitle}>Trailer Video</h1>
-            <div className={styles.footerVideo}>
-              <img
-                className="img-fluid"
-                src="https://cdn2492.cdn-template-4s.com/media/banner/banner-3.webp"
-                alt=""
-              />
+            <div className="ratio ratio-4x3">
+              <iframe
+                src="https://www.youtube.com/embed/GDlkCkcIqTs?si=71dSAMPAZpqJEyvD"
+                title="Video"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
       </div>
 
       <div className={styles.copyright}>
-        <span> © 2024 Phúc Khang Mobile. All rights reserved</span>
+        <span> © 2024 XT Mobile. All rights reserved</span>
         <a
           className={styles.copyrightCertification}
           href="https://moit.gov.vn"

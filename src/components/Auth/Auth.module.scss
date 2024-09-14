@@ -1,0 +1,26 @@
+.orDivider {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   margin-block: clamp(1.563rem, 1.145rem + 1.781vw, 2rem);
+   span {
+     color: #aaaa;
+     font-size: 15px;
+     font-weight: 400;
+     padding-inline: 20px;
+     line-height: 20px;
+   }
+   &::before,
+   &::after {
+     content: "";
+     flex: 1;
+     border-bottom: 1px solid #dadada;
+   }
+   &::before {
+     margin-right: 0.25em;
+   }
+   &::after {
+     margin-left: 0.25em;
+   }
+ }
+ 

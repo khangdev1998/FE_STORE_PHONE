@@ -1,22 +1,23 @@
 import React from "react";
 import styles from "./Product.module.scss";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   return (
     <div className={`${styles.product} card rounded-3 overflow-hidden`}>
       <div className={`${styles.productLabel}`}>HOT</div>
 
-      <a href="#!" className={styles.productImage}>
+      <Link to="/product-detail" className={styles.productImage}>
         <img
           src="https://cdn2492.cdn-template-4s.com/thumbs/san-pham/dien-thoai/113_thumb_350.webp"
           alt="this-image"
         />
-      </a>
+      </Link>
 
       <div className={styles.productInfo}>
-        <a className={styles.productInfoName} href="#!">
+        <Link to="/product-detail" className={styles.productInfoName}>
           Apple iPhone 11 Pro Max, 256GB, Black – Unlocked
-        </a>
+        </Link>
         <div className={styles.productInfoRating}>
           <div className="d-flex align-items-center gap-1">
             <i className="bi bi-star"></i>

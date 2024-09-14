@@ -1,0 +1,117 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.productInfo {
+  &Title {
+    font-size: 28px;
+    font-weight: 500;
+    color: $primary-text;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  &Rating {
+    margin-block: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    i {
+      color: #f8b81f;
+      font-size: 20px;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+  &Price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+    .priceCurrent {
+      font-size: 20px;
+      font-weight: 500;
+      color: #eb3e3e;
+      margin-right: 10px;
+    }
+    .priceOld {
+      font-size: 16px;
+      font-weight: 500;
+      color: #b9b9b9;
+      text-decoration: line-through;
+    }
+  }
+  &Code {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    b {
+      font-size: 16px;
+      color: $primary-text;
+      font-weight: bold;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+  &Category {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    b {
+      font-size: 16px;
+      color: $primary-text;
+      font-weight: bold;
+    }
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+  &Details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: disc;
+    padding-left: 16px;
+    margin-top: 15px;
+    li {
+      font-size: 14px;
+      color: #848484;
+      line-height: 20px;
+    }
+  }
+  &Quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-block: 20px;
+    button,
+    input {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      border: 1.5px solid #b9b9b9;
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary-text;
+      text-align: center;
+    }
+    input {
+      outline-color: #1c91ff;
+    }
+    button:active {
+      background-color: #f5f5f5;
+      border: 1.5px solid #b9b9b9;
+    }
+  }
+}

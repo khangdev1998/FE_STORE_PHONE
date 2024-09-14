@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ListProduct.module.scss";
 import Product from "../../../../components/Product/Product";
+import { Link } from "react-router-dom";
 
 const ListProduct = () => {
   return (
@@ -9,10 +10,10 @@ const ListProduct = () => {
         <div className={styles.listProductHeader}>
           <h1>Điện thoại</h1>
 
-          <a href="#!">
+          <Link to="/list-phone">
             Xem thêm
             <i className="bi bi-arrow-right ms-2"></i>
-          </a>
+          </Link>
         </div>
 
         <div className="row g-4">

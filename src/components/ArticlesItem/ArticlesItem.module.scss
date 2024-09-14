@@ -4,14 +4,32 @@
 .articles {
   &Item {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    &Column {
+      gap: 8px;
+      flex-direction: column;
+    }
+    &Row {
+      flex-direction: row;
+      gap: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      .articlesItemContent {
+        a,
+        p {
+          font-size: 14px;
+        }
+        a {
+          line-height: 20px;
+        }
+        p {
+          margin-top: 5px;
+        }
+      }
+    }
     &Image {
       border-radius: 10px;
       overflow: hidden;
-      aspect-ratio: 16 / 9;
       img {
-        @include size(100%);
         object-fit: cover;
         transition: all 0.24s cubic-bezier(0.39, 0.575, 0.565, 1);
       }

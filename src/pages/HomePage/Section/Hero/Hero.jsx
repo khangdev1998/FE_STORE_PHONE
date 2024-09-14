@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 1650,
@@ -21,19 +21,30 @@ const Hero = () => {
         <Slider {...settings}>
           <div className={styles.heroSliderItem}>
             <img
-              src="https://cdn2492.cdn-template-4s.com/media/banner/slide-1.webp"
+              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/100924-BANNER-IP16SR-1200.jpg"
               alt="this-image"
             />
           </div>
           <div className={styles.heroSliderItem}>
             <img
-              src="https://cdn2492.cdn-template-4s.com/media/banner/slide-2.webp"
+              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/banner-tragop-3khong-1200-130724.png"
+              alt="this-image"
+            />
+          </div>
+          <div className={styles.heroSliderItem}>
+            <img
+              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/030824-banner-oppo-reno12-1200.png"
+              alt="this-image"
+            />
+          </div>
+          <div className={styles.heroSliderItem}>
+            <img
+              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/head-simso-1200-260624.png"
               alt="this-image"
             />
           </div>
         </Slider>
       </div>
-
       <div className={styles.heroList}>
         <div className="row g-4">
           <div className="col-4">

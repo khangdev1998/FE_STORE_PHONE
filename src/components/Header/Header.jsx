@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import Overlay from "../Overlay/Overlay";
+import { Link, useNavigate } from "react-router-dom";
+import LoginCard from "../Auth/LoginCard";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -64,27 +66,27 @@ const Header = () => {
 
       <div className="container">
         <div className={`${styles.header}`}>
-          <a className={styles.headerLogo} href="#!">
+          <Link className={styles.headerLogo} to="/">
             <img
-              src="https://cdn2492.cdn-template-4s.com/media/logo/logo.png"
+              src="https://cdn.xtmobile.vn/vnt_upload/weblink/logoxt-01-01_1_copy.png"
               alt="this-icon"
             />
-          </a>
+          </Link>
           <ul className={styles.headerList}>
             <li>
-              <a href="#!">Trang chủ</a>
+              <Link to="/">Trang chủ</Link>
             </li>
             <li>
-              <a href="#!">Điện thoại</a>
+              <Link to="/list-phone">Điện thoại</Link>
             </li>
             <li>
-              <a href="#!">Bài viết</a>
+              <Link to="/list-blog">Bài viết</Link>
             </li>
             <li>
-              <a href="#!">Giới thiệu</a>
+              <Link to="/introduce">Giới thiệu</Link>
             </li>
             <li>
-              <a href="#!">Liên hệ</a>
+              <Link to="/contact">Liên hệ</Link>
             </li>
           </ul>
           <div className={styles.headerControls}>
@@ -150,7 +152,7 @@ const SearchModal = () => {
   );
 };
 
-const CartModal = (isSidebarOpen, closeSidebar) => {
+const CartModal = (isSidebarOpen) => {
   return (
     <div
       className={`${styles["modal-cart"]} ${
@@ -202,17 +204,18 @@ const CartModal = (isSidebarOpen, closeSidebar) => {
 };
 
 const UserModal = () => {
+  const navigate = useNavigate();
   return (
     <div
-      className="modal fade "
+      className="modal fade"
       id="userModal"
       tabIndex="-1"
       aria-labelledby="userModalLabel"
       aria-hidden="true"
     >
-      <div className="modal-dialog" style={{ maxWidth: "650px" }}>
-        <div className="modal-content">
-          <div className="modal-header">
+      <div className="modal-dialog" style={{ maxWidth: "580px" }}>
+        <div className="modal-content p-3">
+          <div className="modal-header pt-1">
             <h1
               className="modal-title fs-5 text-uppercase"
               id="exampleModalLabel"
@@ -227,35 +230,16 @@ const UserModal = () => {
             ></button>
           </div>
           <div className="modal-body">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus
-            laudantium harum minus vel tempore repellat unde at consequatur
-            eaque, molestias quaerat eius? Ipsum accusantium eum numquam nulla
-            esse aspernatur minus? Doloribus, ratione! Expedita animi incidunt
-            quo veniam, nihil asperiores architecto maiores aut, repellendus,
-            eum ea? Sunt unde fugit voluptas eum veritatis vitae nobis! Eligendi
-            iste maxime vel corporis molestias esse. Repellendus minima dolorum
-            culpa quo? Aut deserunt reprehenderit qui alias optio maiores, atque
-            asperiores. Aliquid maxime nobis laborum nulla beatae! Nesciunt
-            iusto labore reprehenderit eos odit veniam a praesentium tempore.
-            Voluptatum quasi modi doloribus recusandae hic amet perferendis
-            quibusdam ab dignissimos, nemo fugiat aliquam ad reprehenderit culpa
-            harum deserunt voluptate doloremque nam earum voluptas. Eum voluptas
-            adipisci voluptates quae error! Ex, quae asperiores libero
-            repellendus quas natus, doloribus quisquam dolor molestiae
-            voluptatem consequatur! Impedit ipsam harum delectus vero rerum
-            quidem dicta id alias animi commodi. Tempore odio vitae ad soluta!
+            <LoginCard navigate={navigate} />
           </div>
-          <div className="modal-footer">
+          <div className="modal-footer mt-2 pb-1">
             <button
-              type="button"
-              className="btn btn-secondary"
+              className="btn btn-outline-primary"
               data-bs-dismiss="modal"
+              onClick={() => navigate("/register")}
             >
-              Đóng lại
-            </button>
-            <a href="#!" className="btn btn-primary">
               Đăng ký ngay
-            </a>
+            </button>
           </div>
         </div>
       </div>
