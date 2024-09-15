@@ -42,7 +42,7 @@ const BlogDetail = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-9">
+            <div className="col-xl-9 col-12">
               <div className={`${styles.postContent} bg-light p-4 rounded-4`}>
                 <h1>
                   3 dòng TV cao cấp gồm Neo QLED 8K, Neo QLED 4K và TV OLED 2024
@@ -142,11 +142,11 @@ const BlogDetail = () => {
 
         <div className={styles.listPostRelated}>
           <h2 className={styles.listPostRelatedTitle}>Bài viết liên quan</h2>
-          <div className="row g-4">
+          <div className="row g-lg-4 g-3">
             {Array(4)
               .fill(0)
               .map((_, index) => (
-                <div className="col-3" key={index}>
+                <div className="col-md-3 col-6" key={index}>
                   <ArticlesItem />
                 </div>
               ))}

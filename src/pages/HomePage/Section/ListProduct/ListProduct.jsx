@@ -8,7 +8,16 @@ const ListProduct = () => {
     <div className={styles.listProduct}>
       <div className="container">
         <div className={styles.listProductHeader}>
-          <h1>Điện thoại</h1>
+          <h1
+            style={{
+              fontSize: "clamp(1.375rem, 1.109rem + 1.002vw, 1.75rem)",
+              lineHeight: "30px",
+              color: "#292f36",
+              fontWeight: "bold",
+            }}
+          >
+            Điện thoại
+          </h1>
           <ReadmoreButton to="/list-phone" text="Xem thêm sản phẩm" />
         </div>
 

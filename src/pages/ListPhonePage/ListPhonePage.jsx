@@ -28,9 +28,9 @@ const ListPhonePage = () => {
       </div>
       <div className="bg-light py-5 my-4">
         <div className="container">
-          <div className="d-flex align-items-center justify-content-between gap-4 mb-2">
+          <div className="row justify-content-between align-items-center g-sm-4 g-2 mb-4">
             {/* Lọc giá bằng input range */}
-            <div className="col-3">
+            <div className="col-xl-3 col-lg-4 col-sm-6">
               <label htmlFor="priceRange" className="form-label">
                 Giá sản phẩm: {formatCurrency(price)}
               </label>
@@ -47,7 +47,7 @@ const ListPhonePage = () => {
             </div>
 
             {/* Sắp xếp theo giá */}
-            <div className="col-3 mb-4">
+            <div className="col-xl-3 col-lg-4 col-sm-6">
               <label htmlFor="sortPrice" className="form-label">
                 Sắp xếp theo giá
               </label>
@@ -57,12 +57,12 @@ const ListPhonePage = () => {
               </select>
             </div>
           </div>
-          <div className="row g-4">
+          <div className="row g-lg-4 g-3">
             {Array(totalProducts)
               .fill(0)
               .slice(0, visibleProducts)
               .map((_, index) => (
-                <div className="col-3" key={index}>
+                <div className="col-lg-3 col-md-4 col-6" key={index}>
                   <Product />
                 </div>
               ))}

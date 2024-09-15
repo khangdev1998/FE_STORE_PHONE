@@ -45,7 +45,7 @@ const Hero = () => {
           </div>
         </Slider>
       </div>
-      <div className={styles.heroList}>
+      <div className={`${styles.heroList} d-md-block d-none`}>
         <div className="row g-sm-4 g-2">
           <div className="col-md-4">
             <img

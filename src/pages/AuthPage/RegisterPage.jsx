@@ -12,7 +12,7 @@ const RegisterPage = () => {
       <div className="bg-light py-5 my-4">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-8">
+            <div className="col-xl-8 col-12">
               <RegisterCard />
             </div>
           </div>

@@ -32,4 +32,9 @@
       }
     }
   }
+  @include maxWidth(599px) {
+    &SliderItem {
+      padding-bottom: 39%;
+    }
+  }
 }

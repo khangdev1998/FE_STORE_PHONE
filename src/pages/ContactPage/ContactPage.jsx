@@ -11,10 +11,10 @@ const ContactPage = () => {
 
       <div className="bg-light py-5 mt-4">
         <div className="container my-4">
-          <div className="row">
+          <div className="row g-4">
             <div className="col-md-6">
               <h3 className="mb-3">Thông tin liên hệ</h3>
-              <ul className="d-flex flex-column gap-3">
+              <ul className="d-flex flex-column gap-sm-3 gap-2">
                 <li className="d-flex align-items-center gap-3">
                   <i className="bi bi-geo-alt-fill fs-5"></i>
                   Tầng 4, Tòa nhà số 97 - 99 Láng Hạ, Đống Đa, Hà Nội (Tòa nhà
@@ -44,7 +44,7 @@ const ContactPage = () => {
 
             <div className="col-md-6">
               <form>
-                <div className="row mb-3">
+                <div className="row g-3 mb-3">
                   <div className="col-md-6">
                     <input
                       type="text"

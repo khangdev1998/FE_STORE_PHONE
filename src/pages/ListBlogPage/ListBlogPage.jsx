@@ -13,18 +13,18 @@ const ListBlogPage = () => {
       <div className="bg-light py-5 my-4">
         <div className="container">
           <div className="row g-5">
-            <div className="col-8">
-              <div className="row g-4">
+            <div className="col-lg-8">
+              <div className="row g-sm-4 g-3">
                 {Array(11)
                   .fill(0)
                   .map((_, index) => (
-                    <div key={index} className="col-4">
+                    <div key={index} className="col-sm-4 col-6">
                       <ArticlesItem />
                     </div>
                   ))}
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4">
               <h4>Bài viết nổi bật</h4>
 
               <div className={styles.search}>

@@ -8,7 +8,7 @@ const IntroDucePage = () => {
       <div className="container my-3">
         <Breadcrumb />
       </div>
-      <div className="my-4 p-5 bg-light">
+      <div className="my-4 p-md-5 p-3 bg-light">
         <div className="container">
           {/* Title chính */}
           <h2 className="color-primary mb-3">

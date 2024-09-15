@@ -6,10 +6,11 @@ import YouTube from "react-youtube";
 const Footer = () => {
   const opts = {
     playerVars: {
-      autoplay: 1,
-      controls: 0,
+      controls: 1,
       rel: 0,
       modestbranding: 1,
+      mute: 1,
+      autoplay: 1,
     },
   };
   return (
@@ -99,10 +100,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <h1 className={styles.footerTitle}>Trailer Video</h1>
             <div className={styles.footerVideo}>
-              <YouTube
-                videoId="GDlkCkcIqTs"
-                opts={opts}
-              />
+              <YouTube videoId="GDlkCkcIqTs" opts={opts} />
             </div>
           </div>
         </div>

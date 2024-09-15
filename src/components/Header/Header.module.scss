@@ -137,6 +137,7 @@
       }
       i {
         font-size: 20px;
+        color: $primary-text;
       }
     }
     &Cart {
@@ -151,7 +152,9 @@
       color: #0068c8;
       &:hover {
         background-color: $primary-color;
-        color: $light-color;
+        & > * {
+          color: $light-color;
+        }
       }
       span {
         font-weight: 600;
@@ -161,6 +164,14 @@
       }
       i {
         font-size: 20px;
+        color: $primary-color;
+      }
+    }
+    &Bar {
+      display: none;
+      i {
+        font-size: 20px;
+        color: $primary-text;
       }
     }
   }
@@ -326,7 +337,7 @@
   }
 }
 @include maxWidth(767px) {
-  .topbar{
+  .topbar {
     flex-direction: column;
   }
   .header {
@@ -334,7 +345,7 @@
   }
 }
 @include maxWidth(424px) {
-  .topbar{
+  .topbar {
     &Contact {
       display: none;
     }

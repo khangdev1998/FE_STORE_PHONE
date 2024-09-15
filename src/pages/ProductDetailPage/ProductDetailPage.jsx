@@ -32,15 +32,15 @@ const ProductDetailPage = () => {
         <Breadcrumb />
       </div>
       <div className="container mb-5">
-        <div className="row g-4">
-          <div className="col-5">
+        <div className="row g-sm-4 g-2">
+          <div className="col-sm-5">
             <img
               className="img-fluid"
               src="https://cdn2492.cdn-template-4s.com/thumbs/san-pham/dien-thoai/113_thumb_350.webp"
               alt="this-image"
             />
           </div>
-          <div className="col-7">
+          <div className="col-sm-7">
             <div className={styles.productInfo}>
               <h1 className={styles.productInfoTitle}>
                 Apple iPhone 11 Pro Max, 8GB, 256GB
@@ -101,41 +101,43 @@ const ProductDetailPage = () => {
           </div>
         </div>
 
-        <div className="row g-4 mt-4">
-          <div className="col-12">
-            <h3 className="mb-2">Thông tin sản phẩm</h3>
-            <p className="lh-lg">
-              Apple iPhone 11 Pro Max, 8GB, 256GB này có màn hình Retina màn
-              hình rộng 14 inch có đèn nền LED độ phân giải cao (độ phân giải
-              gốc 2560 x 1600). Được trang bị Intel Core i5 (2.3GHz) và Intel
-              Iris Plus Graphics 640. Ổ cứng thể rắn dung lượng 256GB với 8GB
-              RAM. Hỗ trợ hệ điều hành Mac. Gói bao gồm Vỏ màu đen, Chuột không
-              dây và Tai nghe Bluetooth! Thiết bị này đã được thử nghiệm ở tình
-              trạng hoạt động tốt. Nó sẽ có dấu hiệu sử dụng và các nhược điểm
-              về mặt thẩm mỹ, có thể bao gồm một số vết xước/vết lõm, tất cả
-              những điều này không ảnh hưởng đến khả năng sử dụng của thiết bị
-              này. (Tân trang lại)
-              <br />
-              Tận hưởng hiệu suất PC nhanh, mượt mà mà không bị hao pin nhờ bộ
-              nhớ LPDDR5. Và với ống dẫn nhiệt kép, thiết bị của bạn luôn đẹp,
-              mát và hoạt động tốt nhất. Trong khi đó, bộ điều nhiệt thích ứng
-              sẽ tối ưu hóa năng lượng tùy theo vị trí thiết bị của bạn, cho dù
-              đó là trên bề mặt ổn định như bàn làm việc hay bề mặt không ổn
-              định như lòng bàn tay của bạn. Bằng cách sử dụng các thuật toán và
-              gia tốc kế tiên tiến, thiết bị của bạn sẽ điều chỉnh thông minh
-              các cấu hình nguồn và nhiệt cho phù hợp với tình huống để giúp
-              thiết bị của bạn hoạt động trơn tru.
-            </p>
+        <div className={styles.content}>
+          <div className="row g-4 mt-4">
+            <div className="col-12">
+              <h3 className="mb-sm-3 mb-2">Thông tin sản phẩm</h3>
+              <p>
+                Apple iPhone 11 Pro Max, 8GB, 256GB này có màn hình Retina màn
+                hình rộng 14 inch có đèn nền LED độ phân giải cao (độ phân giải
+                gốc 2560 x 1600). Được trang bị Intel Core i5 (2.3GHz) và Intel
+                Iris Plus Graphics 640. Ổ cứng thể rắn dung lượng 256GB với 8GB
+                RAM. Hỗ trợ hệ điều hành Mac. Gói bao gồm Vỏ màu đen, Chuột
+                không dây và Tai nghe Bluetooth! Thiết bị này đã được thử nghiệm
+                ở tình trạng hoạt động tốt. Nó sẽ có dấu hiệu sử dụng và các
+                nhược điểm về mặt thẩm mỹ, có thể bao gồm một số vết xước/vết
+                lõm, tất cả những điều này không ảnh hưởng đến khả năng sử dụng
+                của thiết bị này. (Tân trang lại)
+                <br />
+                Tận hưởng hiệu suất PC nhanh, mượt mà mà không bị hao pin nhờ bộ
+                nhớ LPDDR5. Và với ống dẫn nhiệt kép, thiết bị của bạn luôn đẹp,
+                mát và hoạt động tốt nhất. Trong khi đó, bộ điều nhiệt thích ứng
+                sẽ tối ưu hóa năng lượng tùy theo vị trí thiết bị của bạn, cho
+                dù đó là trên bề mặt ổn định như bàn làm việc hay bề mặt không
+                ổn định như lòng bàn tay của bạn. Bằng cách sử dụng các thuật
+                toán và gia tốc kế tiên tiến, thiết bị của bạn sẽ điều chỉnh
+                thông minh các cấu hình nguồn và nhiệt cho phù hợp với tình
+                huống để giúp thiết bị của bạn hoạt động trơn tru.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className={`${styles.productSlider} mt-5`}>
+        <div className="my-5">
           <h3 className="mb-3">Sản phẩm tương tự</h3>
-          <div className="row g-4">
+          <div className="row g-md-4 g-3">
             {Array(4)
               .fill(0)
               .map((_, index) => (
-                <div className="col-3" key={index}>
+                <div className="col-lg-3 col-md-4 col-6" key={index}>
                   <Product />
                 </div>
               ))}

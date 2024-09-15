@@ -6,6 +6,7 @@ import LoginCard from "../Auth/LoginCard";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State để theo dõi trạng thái menu
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -13,6 +14,10 @@ const Header = () => {
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Đảo trạng thái menu khi nhấn vào nút headerBar
   };
 
   useEffect(() => {
@@ -29,7 +34,7 @@ const Header = () => {
   return (
     <>
       <div className={styles.topbar}>
-        <div className="container d-flex flex-md-row flex-column align-items-center justify-content-between gap-md-4 gap-3">
+        <div className="container d-flex flex-md-row flex-column align-items-center justify-content-between gap-md-4 gap-2">
           <div className={styles.topbarContact}>
             <a href="tel:0123456789" className={styles.topbarContactLink}>
               <i className="bi bi-telephone-fill"></i>
