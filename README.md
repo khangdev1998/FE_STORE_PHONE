@@ -1,5 +1,3 @@
-
-
 Đây là một ứng dụng React sử dụng Vite để phát triển nhanh và tối ưu hóa. Làm theo các hướng dẫn dưới đây để cài đặt và chạy dự án trên máy tính của bạn.
 
 ## Yêu Cầu
