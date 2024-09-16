@@ -270,7 +270,7 @@ const UserModal = () => {
             ></button>
           </div>
           <div className="modal-body">
-            <LoginCard navigate={navigate} />
+            <LoginCard isModal="true" />
           </div>
           <div className="modal-footer mt-2 pb-1">
             <button

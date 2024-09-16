@@ -3,7 +3,8 @@ import styles from "./Auth.module.scss";
 import ButtonMain from "./ButtonMain";
 import { useNavigate } from "react-router-dom";
 
-const LoginCard = ({ navigate }) => {
+const LoginCard = ({ isModal = false }) => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="d-flex flex-sm-row flex-column justify-content-between gap-sm-3 gap-2 mb-3">
@@ -49,11 +50,11 @@ const LoginCard = ({ navigate }) => {
           <button
             type="value"
             className="btn btn-link text-decoration-none text-muted"
-            data-bs-dismiss="modal"
+            {...(isModal && { "data-bs-dismiss": "modal" })}
             onClick={() => navigate("/forgot-password")}
           >
             Quên mật khẩu?
-        </button>
+          </button>
         </div>
 
         <ButtonMain text="Đăng nhập" />

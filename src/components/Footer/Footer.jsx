@@ -11,6 +11,8 @@ const Footer = () => {
       modestbranding: 1,
       mute: 1,
       autoplay: 1,
+      loop: 1,
+      playlist: "GDlkCkcIqTs",
     },
   };
   return (
