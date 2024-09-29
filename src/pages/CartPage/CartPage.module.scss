@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/mixins.scss";
+
+table {
+  th,
+  td {
+    vertical-align: middle;
+  }
+}
+
+.deposit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  &Caption {
+    font-size: 24px;
+    line-height: 32px;
+    color: $primary-text;
+    font-weight: 600;
+  }
+  &Desc {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: $primary-text;
+  }
+  &Infomation {
+    margin-top: 35px;
+    max-width: 450px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    span,
+    b {
+      font-size: 15px;
+      line-height: 20px;
+      color: $primary-text;
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+  .textNote {
+    margin-top: 8px;
+    color: #ff6d3b;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}

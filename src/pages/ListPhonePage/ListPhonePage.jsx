@@ -4,59 +4,56 @@ import Product from "../../components/Product/Product";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 const ListPhonePage = () => {
-  // State để lưu trữ giá trị của thanh trượt
-  const [price, setPrice] = useState(500000);
+  // State để lưu trữ giá trị của thanh trượt và các bộ lọc
   const [visibleProducts, setVisibleProducts] = useState(12);
   const totalProducts = 30; // Tổng số sản phẩm
 
-  // Hàm định dạng giá trị tiền tệ VNĐ
-  const formatCurrency = (value) => {
-    return new Intl.NumberFormat("vi-VN", {
-      style: "currency",
-      currency: "VND",
-    }).format(value);
-  };
+  // Các state cho bộ lọc
+  const [selectedMemory, setSelectedMemory] = useState("");
+  const [selectedScreenSize, setSelectedScreenSize] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState("");
+  const [selectedBrand, setSelectedBrand] = useState("");
+  const [selectedRam, setSelectedRam] = useState(""); // State cho lọc RAM
 
   // Hàm xử lý xem thêm sản phẩm
   const handleLoadMore = () => {
     setVisibleProducts((prevVisible) => prevVisible + 4);
   };
+
+  // Hàm xử lý thay đổi bộ lọc
+  const handleFilterChange = (e, filterType) => {
+    const value = e.target.value;
+    switch (filterType) {
+      case "memory":
+        setSelectedMemory(value);
+        break;
+      case "screenSize":
+        setSelectedScreenSize(value);
+        break;
+      case "price":
+        setSelectedPrice(value);
+        break;
+      case "brand":
+        setSelectedBrand(value);
+        break;
+      case "ram":
+        setSelectedRam(value); // Xử lý lọc RAM
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <>
       <div className="container my-3">
         <Breadcrumb />
       </div>
+
       <div className="bg-light py-5 my-4">
         <div className="container">
-          <div className="row justify-content-between align-items-center g-sm-4 g-2 mb-4">
-            {/* Lọc giá bằng input range */}
-            <div className="col-xl-3 col-lg-4 col-sm-6">
-              <label htmlFor="priceRange" className="form-label">
-                Giá sản phẩm: {formatCurrency(price)}
-              </label>
-              <input
-                type="range"
-                className="form-range"
-                id="priceRange"
-                min="0"
-                max="1000000"
-                step="10000"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-              />
-            </div>
-
-            {/* Sắp xếp theo giá */}
-            <div className="col-xl-3 col-lg-4 col-sm-6">
-              <label htmlFor="sortPrice" className="form-label">
-                Sắp xếp theo giá
-              </label>
-              <select id="sortPrice" className="form-select">
-                <option value="asc">Giá: Thấp đến cao</option>
-                <option value="desc">Giá: Cao đến thấp</option>
-              </select>
-            </div>
-          </div>
+          {/* Dropdown lọc sản phẩm */}
+       
           <div className="row g-lg-4 g-3">
             {Array(totalProducts)
               .fill(0)
