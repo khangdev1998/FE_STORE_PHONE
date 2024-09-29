@@ -3,6 +3,7 @@ import styles from "./Header.module.scss";
 import Overlay from "../Overlay/Overlay";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import LoginCard from "../Auth/LoginCard";
+import logo from "../../assets/logo.png";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -63,10 +64,7 @@ const Header = () => {
       <div className="container">
         <div className={`${styles.header}`}>
           <Link className={styles.headerLogo} to="/">
-            <img
-              src="https://cdn.xtmobile.vn/vnt_upload/weblink/logoxt-01-01_1_copy.png"
-              alt="this-icon"
-            />
+            <img src={logo} alt="this-icon" />
           </Link>
           <ul className={styles.headerList}>
             <li>
