@@ -1,7 +1,16 @@
+@import "../../styles/mixins.scss";
+
 .dropdownList {
   --column: 5;
   display: grid;
   grid-template-columns: repeat(var(--column), minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 40px;
+  @include maxWidth(1023px) {
+    --column: 3;
+  }
+  @include maxWidth(599px) {
+    margin-bottom: 30px;
+    --column: 2;
+  }
 }

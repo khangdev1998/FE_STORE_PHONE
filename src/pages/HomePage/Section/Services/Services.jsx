@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Services.module.scss";
 const Services = () => {
   return (
-    <div className={styles.services}>
+    <div className={`${styles.services} my-md-0 my-3`}>
       <div className="container">
         <div className="row g-5">
           <div className="col-xl-3 col-md-6">

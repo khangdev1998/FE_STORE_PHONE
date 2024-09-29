@@ -53,7 +53,72 @@ const ListPhonePage = () => {
       <div className="bg-light py-5 my-4">
         <div className="container">
           {/* Dropdown lọc sản phẩm */}
-       
+          <div className={styles.dropdownList}>
+            <select
+              className="form-select"
+              value={selectedPrice}
+              onChange={(e) => handleFilterChange(e, "price")}
+            >
+              <option value="">Chọn mức giá</option>
+              <option value="duoi-5-trieu">Dưới 5 triệu</option>
+              <option value="5-10-trieu">5-10 triệu</option>
+              <option value="10-15-trieu">10-15 triệu</option>
+              <option value="tren-15-trieu">Trên 15 triệu</option>
+            </select>
+
+            {/* Dropdown chọn bộ nhớ */}
+            <select
+              className="form-select"
+              value={selectedMemory}
+              onChange={(e) => handleFilterChange(e, "memory")}
+            >
+              <option value="">Chọn bộ nhớ</option>
+              <option value="32gb">32GB</option>
+              <option value="64gb">64GB</option>
+              <option value="128gb">128GB</option>
+              <option value="256gb">256GB</option>
+            </select>
+
+            {/* Dropdown chọn kích thước màn hình */}
+            <select
+              className="form-select"
+              value={selectedScreenSize}
+              onChange={(e) => handleFilterChange(e, "screenSize")}
+            >
+              <option value="">Chọn kích thước màn hình</option>
+              <option value="duoi-5-inch">Dưới 5 inch</option>
+              <option value="5-6-inch">5-6 inch</option>
+              <option value="tren-6-inch">Trên 6 inch</option>
+            </select>
+
+            {/* Dropdown chọn thương hiệu */}
+            <select
+              className="form-select"
+              value={selectedBrand}
+              onChange={(e) => handleFilterChange(e, "brand")}
+            >
+              <option value="">Chọn thương hiệu</option>
+              <option value="apple">Apple</option>
+              <option value="samsung">Samsung</option>
+              <option value="xiaomi">Xiaomi</option>
+              <option value="oppo">Oppo</option>
+            </select>
+
+            {/* Dropdown chọn RAM */}
+            <select
+              className="form-select"
+              value={selectedRam}
+              onChange={(e) => handleFilterChange(e, "ram")}
+            >
+              <option value="">Chọn RAM</option>
+              <option value="4gb">4GB</option>
+              <option value="6gb">6GB</option>
+              <option value="8gb">8GB</option>
+              <option value="12gb">12GB</option>
+            </select>
+          </div>
+
+          {/* Hiển thị sản phẩm */}
           <div className="row g-lg-4 g-3">
             {Array(totalProducts)
               .fill(0)
