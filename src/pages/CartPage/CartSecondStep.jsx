@@ -53,10 +53,10 @@ const CartSecondStep = () => {
       <h3 className="mb-4">Thanh toán và giao hàng</h3>
       <div className="row g-4">
         <div className="col-md-8">
-          <div className="border p-4 rounded">
+          <div className="border p-lg-4 p-3 rounded">
             <form>
               {/* Họ và tên + Số điện thoại */}
-              <div className="row mb-4">
+              <div className="row mb-4 g-4">
                 <div className="col-md-6">
                   <label htmlFor="fullName" className="form-label">
                     Họ và tên
@@ -104,7 +104,7 @@ const CartSecondStep = () => {
               </div>
 
               {/* Tỉnh / Thành + Quận / Huyện */}
-              <div className="row mb-4">
+              <div className="row mb-4 g-4">
                 <div className="col-md-6">
                   <label htmlFor="city" className="form-label">
                     Tỉnh / Thành
@@ -214,7 +214,7 @@ const CartSecondStep = () => {
         </div>
 
         <div className="col-md-4">
-          <div className="border rounded-3 p-4">
+          <div className="border rounded-3 p-lg-4 p-3">
             <h5 className="text-danger">
               Tổng giá: {getTotalPrice().toLocaleString()}₫
             </h5>

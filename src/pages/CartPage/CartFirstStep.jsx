@@ -58,9 +58,12 @@ const CartFirstStep = () => {
     <div className="container mt-5">
       <h3 className="mb-4">Giỏ hàng của bạn</h3>
       <div className="row g-3">
-        <div className="col-md-9">
-          <div className="border rounded-3 p-4">
-            <table className="table table-striped">
+        <div className="col-xl-9">
+          <div className="border rounded-3 p-4 overflow-auto">
+            <table
+              className="table table-striped"
+              style={{ minWidth: "885px" }}
+            >
               <thead>
                 <tr>
                   <th style={{ width: "45%", verticalAlign: "middle" }}>
@@ -146,16 +149,13 @@ const CartFirstStep = () => {
             </table>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-xl-3">
           <div className="border rounded-3 p-4">
             <h5 className="text-danger">
               Tổng giá: {getTotalPrice().toLocaleString()}₫
             </h5>
             <div className="d-flex flex-column gap-2 mt-3">
-              <Link
-                to="/cart-step2"
-                className="btn btn-primary p-2"
-              >
+              <Link to="/cart-step2" className="btn btn-primary p-2">
                 Thanh toán ngay
               </Link>
               <Link to="/list-phone" className="btn btn-primary p-2">

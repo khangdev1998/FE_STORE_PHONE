@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Services.module.scss";
+
 const Services = () => {
   return (
     <div className={`${styles.services} my-md-0 my-3`}>
@@ -57,6 +58,6 @@ const Services = () => {
       </div>
     </div>
   );
-};
+};` `
 
 export default Services;
