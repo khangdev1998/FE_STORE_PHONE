@@ -3,37 +3,6 @@
    height: $h;
  }
  
- @mixin scrollsnap($auto-column: 0, $gap: 0, $display: block) {
-   display: grid;
-   justify-content: flex-start;
-   grid-auto-columns: $auto-column;
-   grid-auto-flow: column;
-   grid-gap: $gap;
-   overflow: auto;
-   overflow-y: hidden;
-   -ms-scroll-snap-type: x mandatory;
-   scroll-snap-type: x mandatory;
-   scroll-snap-stop: always;
-   touch-action: manipulation;
-   -webkit-overflow-scrolling: touch;
-   grid-template-columns: unset;
-   &::-webkit-scrollbar {
-     width: 1em;
-     height: 5px;
-     display: $display;
-   }
-   &::-webkit-scrollbar-track {
-     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-     border-radius: 4px;
-   }
-   &::-webkit-scrollbar-thumb {
-     background-color: red;
-   }
-   & > * {
-     scroll-snap-align: start;
-   }
- }
- 
  @mixin lineClamp($lc: 1) {
    display: -webkit-box;
    -webkit-line-clamp: $lc;

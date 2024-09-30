@@ -8,8 +8,8 @@ import logo from "../../assets/logo.png";
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Header = () => {
     <>
       <div className={styles.topbar}>
         <div className="container d-flex flex-md-row flex-column align-items-center justify-content-between gap-md-4 gap-2">
-          <div className={styles.topbarContact}>
+          <div className={`${styles.topbarContact} d-md-flex d-none`}>
             <a href="tel:0123456789" className={styles.topbarContactLink}>
               <i className="bi bi-telephone-fill"></i>
               <span> 0123456789</span>
@@ -63,61 +63,112 @@ const Header = () => {
 
       <div className="container">
         <div className={`${styles.header}`}>
-          <Link className={styles.headerLogo} to="/">
-            <img src={logo} alt="this-icon" />
-          </Link>
-          <ul className={styles.headerList}>
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? styles.active : undefined
-                }
+          <div className="d-flex align-items-center gap-3">
+            <button
+              type="button"
+              onClick={() => toggleSidebar()}
+              className="d-lg-none d-block"
+            >
+              {" "}
+              <i className="d-lg-none d-block fs-2 bi bi-layout-text-sidebar-reverse"></i>
+            </button>
+            <Link className={styles.headerLogo} to="/">
+              <img src={logo} alt="this-icon" />
+            </Link>
+          </div>
+          <div
+            className={`${styles.headerNav} ${isSidebarOpen && styles.show}`}
+          >
+            <ul className={styles.headerNavList}>
+              <li>
+                <NavLink
+                  onClick={toggleSidebar}
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? styles.active : undefined
+                  }
+                >
+                  Trang chủ
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={toggleSidebar}
+                  to="/list-phone"
+                  className={({ isActive }) =>
+                    isActive ? styles.active : undefined
+                  }
+                >
+                  Điện thoại
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={toggleSidebar}
+                  to="/list-blog"
+                  className={({ isActive }) =>
+                    isActive ? styles.active : undefined
+                  }
+                >
+                  Bài viết
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={toggleSidebar}
+                  to="/introduce"
+                  className={({ isActive }) =>
+                    isActive ? styles.active : undefined
+                  }
+                >
+                  Giới thiệu
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={toggleSidebar}
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? styles.active : undefined
+                  }
+                >
+                  Liên hệ
+                </NavLink>
+              </li>
+            </ul>
+            <div className={`${styles.headerNavContact}`}>
+              <h5>Liên hệ</h5>
+              <a href="tel:0123456789" className={styles.topbarContactLink}>
+                <i className="bi bi-telephone-fill"></i>
+                <span>0123456789</span>
+              </a>
+              <a
+                href="mailto:contact@yourdomain"
+                className={styles.topbarContactLink}
               >
-                Trang chủ
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/list-phone"
-                className={({ isActive }) =>
-                  isActive ? styles.active : undefined
-                }
-              >
-                Điện thoại
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/list-blog"
-                className={({ isActive }) =>
-                  isActive ? styles.active : undefined
-                }
-              >
-                Bài viết
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/introduce"
-                className={({ isActive }) =>
-                  isActive ? styles.active : undefined
-                }
-              >
-                Giới thiệu
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive ? styles.active : undefined
-                }
-              >
-                Liên hệ
-              </NavLink>
-            </li>
-          </ul>
+                <i className="bi bi-envelope-fill"></i>
+                <span>Email: contact@yourdomain</span>
+              </a>
+
+              <div className="d-flex align-items-center gap-3 mt-1">
+                <a href="#!">
+                  <i className="bi bi-facebook"></i>
+                </a>
+                <a href="#!">
+                  <i className="bi bi-twitter"></i>
+                </a>
+                <a href="#!">
+                  <i className="bi bi-instagram"></i>
+                </a>
+                <a href="#!">
+                  <i className="bi bi-google"></i>
+                </a>
+                <a href="#!">
+                  <i className="bi bi-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
           <div className={styles.headerControls}>
             <button
               type="button"
@@ -143,7 +194,7 @@ const Header = () => {
           </div>
           {SearchModal()}
           {UserModal()}
-          <Overlay isVisible={isSidebarOpen} onClick={closeSidebar} />
+          <Overlay isVisible={isSidebarOpen} onClick={toggleSidebar} />
         </div>
       </div>
     </>
