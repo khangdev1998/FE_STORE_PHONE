@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
+import React, { useEffect, useState } from "react";
 import Overlay from "../Overlay/Overlay";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import LoginCard from "../Auth/LoginCard";
 import logo from "../../assets/logo.png";
+import LoginCard from "../Auth/LoginCard";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -67,10 +67,10 @@ const Header = () => {
             <button
               type="button"
               onClick={() => toggleSidebar()}
-              className="d-lg-none d-block"
+              className="d-xl-none d-block"
             >
               {" "}
-              <i className="d-lg-none d-block fs-2 bi bi-layout-text-sidebar-reverse"></i>
+              <i className="fs-2 text-dark bi bi-layout-text-sidebar-reverse"></i>
             </button>
             <Link className={styles.headerLogo} to="/">
               <img src={logo} alt="this-icon" />
@@ -82,7 +82,7 @@ const Header = () => {
             <ul className={styles.headerNavList}>
               <li>
                 <NavLink
-                  onClick={toggleSidebar}
+                  onClick={() => setIsSidebarOpen(false)}
                   to="/"
                   className={({ isActive }) =>
                     isActive ? styles.active : undefined
@@ -93,7 +93,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  onClick={toggleSidebar}
+                  onClick={() => setIsSidebarOpen(false)}
                   to="/list-phone"
                   className={({ isActive }) =>
                     isActive ? styles.active : undefined
@@ -104,7 +104,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  onClick={toggleSidebar}
+                  onClick={() => setIsSidebarOpen(false)}
                   to="/list-blog"
                   className={({ isActive }) =>
                     isActive ? styles.active : undefined
@@ -115,7 +115,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  onClick={toggleSidebar}
+                  onClick={() => setIsSidebarOpen(false)}
                   to="/introduce"
                   className={({ isActive }) =>
                     isActive ? styles.active : undefined
@@ -126,7 +126,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  onClick={toggleSidebar}
+                  onClick={() => setIsSidebarOpen(false)}
                   to="/contact"
                   className={({ isActive }) =>
                     isActive ? styles.active : undefined
@@ -136,7 +136,7 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <div className={`${styles.headerNavContact}`}>
+            <div className={`${styles.headerNavContact} d-xl-none d-flex`}>
               <h5>Liên hệ</h5>
               <a href="tel:0123456789" className={styles.topbarContactLink}>
                 <i className="bi bi-telephone-fill"></i>
@@ -194,7 +194,10 @@ const Header = () => {
           </div>
           {SearchModal()}
           {UserModal()}
-          <Overlay isVisible={isSidebarOpen} onClick={toggleSidebar} />
+          <Overlay
+            isVisible={isSidebarOpen}
+            onClick={() => setIsSidebarOpen(false)}
+          />
         </div>
       </div>
     </>
