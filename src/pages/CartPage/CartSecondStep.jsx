@@ -243,7 +243,7 @@ const modalPayment = () => {
     <div
       className="modal fade"
       id="modalPayment"
-      tabindex="-1"
+      tabIndex="-1"
       aria-labelledby="modalPaymentLabel"
       aria-hidden="true"
     >

@@ -1,11 +1,24 @@
 import React, { useState } from "react";
 import styles from "./ProductDetailPage.module.scss";
-import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import Product from "../../components/Product/Product";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
+import productImage1 from "../../assets/product-1.png"; // Silver
+import productImage2 from "../../assets/product-2.png"; // Gold
+import productImage3 from "../../assets/product-3.png"; // Space Gray
+import productImage4 from "../../assets/product-4.png"; // Midnight Green
 
 const ProductDetailPage = () => {
-  // Khai báo state để quản lý số lượng sản phẩm
+  // Khai báo state để quản lý số lượng sản phẩm và màu sắc được chọn
   const [quantity, setQuantity] = useState(1);
+  const [selectedColor, setSelectedColor] = useState("Silver");
+
+  // Danh sách các tùy chọn màu
+  const colors = [
+    { name: "Silver", image: productImage1 },
+    { name: "Gold", image: productImage2 },
+    { name: "Space Gray", image: productImage3 },
+    { name: "Midnight Green", image: productImage4 },
+  ];
 
   // Hàm xử lý tăng số lượng
   const increaseQuantity = () => {
@@ -26,6 +39,17 @@ const ProductDetailPage = () => {
       setQuantity(value);
     }
   };
+
+  // Hàm xử lý chọn màu
+  const handleColorChange = (color) => {
+    setSelectedColor(color);
+  };
+
+  // Tìm hình ảnh sản phẩm theo màu sắc được chọn
+  const selectedProductImage = colors.find(
+    (color) => color.name === selectedColor
+  ).image;
+
   return (
     <>
       <div className="container mt-3 mb-4">
@@ -36,14 +60,14 @@ const ProductDetailPage = () => {
           <div className="col-sm-5">
             <img
               className="img-fluid"
-              src="https://cdn2492.cdn-template-4s.com/thumbs/san-pham/dien-thoai/113_thumb_350.webp"
-              alt="this-image"
+              src={selectedProductImage}
+              alt={selectedColor}
             />
           </div>
           <div className="col-sm-7">
             <div className={styles.productInfo}>
               <h1 className={styles.productInfoTitle}>
-                Apple iPhone 11 Pro Max, 8GB, 256GB
+                Apple iPhone 11 Pro Max, 8GB, 256GB ({selectedColor})
               </h1>
               <div className={styles.productInfoRating}>
                 <div className="d-flex align-items-center gap-2">
@@ -58,6 +82,23 @@ const ProductDetailPage = () => {
               <div className={styles.productInfoPrice}>
                 <span className={styles.priceCurrent}>28.000.000đ</span>
                 <span className={styles.priceOld}>32.000.000đ</span>
+              </div>
+              <div className="mb-3">
+                <b>Chọn màu sắc:</b>
+                <div className="d-flex align-items-center flex-wrap gap-3 mt-2">
+                  {colors.map((color) => (
+                    <button
+                      key={color.name}
+                      type="button"
+                      onClick={() => handleColorChange(color.name)}
+                      className={`btn btn-outline-primary ${
+                        selectedColor === color.name ? "active" : ""
+                      }`}
+                    >
+                      {color.name}
+                    </button>
+                  ))}
+                </div>
               </div>
               <div className={styles.productInfoCode}>
                 <b>Mã sản phẩm:</b>
