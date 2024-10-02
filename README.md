@@ -11,12 +11,6 @@
 
   ### 1. Clone Repository và trỏ đúng thư mục dự án
 
-  ```sh
-  git clone <repository_url>
-  
-  cd dashboard/my-react-app
-  ```
-
   ### 2. Cài Đặt Các Phụ Thuộc
 
   | Lệnh            | Mô tả                                                                |
