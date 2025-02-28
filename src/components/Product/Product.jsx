@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Product.module.scss";
 import { Link } from "react-router-dom";
+import productImage from "../../assets/product-1.png";
 
 const Product = () => {
   return (
@@ -8,10 +9,7 @@ const Product = () => {
       <div className={`${styles.productLabel}`}>HOT</div>
 
       <Link to="/product-detail" className={styles.productImage}>
-        <img
-          src="https://cdn2492.cdn-template-4s.com/thumbs/san-pham/dien-thoai/113_thumb_350.webp"
-          alt="this-image"
-        />
+        <img alt="this-image" src={productImage} />
       </Link>
 
       <div className={styles.productInfo}>

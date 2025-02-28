@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./CartPage.module.scss";
 import qrcodeImage from "../../assets/deposit-qrcode.png";
+import productImage from "../../assets/product-image.png";
 
 const CartSecondStep = () => {
   // Dữ liệu cho các sản phẩm
@@ -12,8 +13,7 @@ const CartSecondStep = () => {
       price: 28000000, // 28.000.000 VND
       originalPrice: 32000000, // 32.000.000 VND (giá gốc)
       quantity: 1,
-      image:
-        "https://cdn2492.cdn-template-4s.com/thumbs/san-pham/dien-thoai/113_thumb_350.webp", // Hình ảnh sản phẩm
+      image: productImage,
     },
   ]);
 

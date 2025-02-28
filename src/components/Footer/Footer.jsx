@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import { Link } from "react-router-dom";
 import YouTube from "react-youtube";
+import license from "../../assets/license.png";
 
 const Footer = () => {
   const opts = {
@@ -115,10 +116,7 @@ const Footer = () => {
           href="https://moit.gov.vn"
           target="_blank"
         >
-          <img
-            src="https://dev.orderhangthai.com/assets/images/license.png"
-            alt="this-image"
-          />
+          <img alt="this-image" src={license} />
         </a>
       </div>
     </div>

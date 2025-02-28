@@ -3,6 +3,13 @@ import styles from "./Hero.module.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import hero1 from "../../../../assets/hero-1.jpg";
+import hero2 from "../../../../assets/hero-2.png";
+import hero3 from "../../../../assets/hero-3.png";
+import hero4 from "../../../../assets/hero-4.png";
+import heroSecond1 from "../../../../assets/hero-second-1.png";
+import heroSecond2 from "../../../../assets/hero-second-2.png";
+import heroSecond3 from "../../../../assets/hero-second-3.png";
 
 const Hero = () => {
   const settings = {
@@ -21,25 +28,25 @@ const Hero = () => {
         <Slider {...settings}>
           <div className={styles.heroSliderItem}>
             <img
-              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/100924-BANNER-IP16SR-1200.jpg"
+            src={hero1}
               alt="this-image"
             />
           </div>
           <div className={styles.heroSliderItem}>
             <img
-              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/banner-tragop-3khong-1200-130724.png"
+              src={hero2}
               alt="this-image"
             />
           </div>
           <div className={styles.heroSliderItem}>
             <img
-              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/030824-banner-oppo-reno12-1200.png"
+              src={hero3}
               alt="this-image"
             />
           </div>
           <div className={styles.heroSliderItem}>
             <img
-              src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/head-simso-1200-260624.png"
+              src={hero4}
               alt="this-image"
             />
           </div>
@@ -49,19 +56,19 @@ const Hero = () => {
         <div className="row g-sm-4 g-2">
           <div className="col-md-4">
             <img
-              src="https://cdn2492.cdn-template-4s.com/media/banner/banner-1.webp"
+             src={heroSecond1}
               alt="this-image"
             />
           </div>
           <div className="col-md-4">
             <img
-              src="https://cdn2492.cdn-template-4s.com/media/banner/banner-2.webp"
+              src={heroSecond2}
               alt="this-image"
             />
           </div>
           <div className="col-md-4">
             <img
-              src="https://cdn2492.cdn-template-4s.com/media/banner/banner-3.webp"
+              src={heroSecond3}
               alt="this-image"
             />
           </div>

@@ -1,5 +1,10 @@
 import React from "react";
 import styles from "./Banner.module.scss";
+import banner1 from "../../../../assets/banner-1.png";
+import banner2 from "../../../../assets/banner-2.png";
+import banner3 from "../../../../assets/banner-3.png";
+import banner4 from "../../../../assets/banner-4.png";
+import banner5 from "../../../../assets/banner-5.png";
 
 const Banner = () => {
   return (
@@ -8,7 +13,7 @@ const Banner = () => {
         <div className="col-12">
           <img
             className="rounded-4 img-fluid"
-            src="https://cdn2492.cdn-template-4s.com/media/banner/banner-4.webp"
+            src={banner1}
             alt="this-image"
           />
         </div>
@@ -17,28 +22,28 @@ const Banner = () => {
           <div className="col-md-3 col-6">
             <img
               className="rounded-4 img-fluid"
-              src="https://cdn2492.cdn-template-4s.com/media/banner/banner-6.webp"
+              src={banner2}
               alt="this-image"
             />
           </div>
           <div className="col-md-3 col-6">
             <img
               className="rounded-4 img-fluid"
-              src="https://cdn2492.cdn-template-4s.com/media/banner/banner-7.webp"
+              src={banner3}
               alt="this-image"
             />
           </div>
           <div className="col-md-3 col-6">
             <img
               className="rounded-4 img-fluid"
-              src="https://cdn2492.cdn-template-4s.com/media/banner/banner-5.webp"
+              src={banner4}
               alt="this-image"
             />
           </div>
           <div className="col-md-3 col-6">
             <img
+              src={banner5}
               className="rounded-4 img-fluid"
-              src="https://cdn2492.cdn-template-4s.com/media/banner/banner-8.webp"
               alt="this-image"
             />
           </div>

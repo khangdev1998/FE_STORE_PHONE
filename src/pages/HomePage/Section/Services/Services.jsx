@@ -1,5 +1,8 @@
-import React from "react";
 import styles from "./Services.module.scss";
+import icon1 from "../../../../assets/services-1.svg";
+import icon2 from "../../../../assets/services-2.svg";
+import icon3 from "../../../../assets/services-3.svg";
+import icon4 from "../../../../assets/services-4.svg";
 
 const Services = () => {
   return (
@@ -8,10 +11,7 @@ const Services = () => {
         <div className="row g-5">
           <div className="col-xl-3 col-md-6">
             <div className={styles.servicesItem}>
-              <img
-                src="https://dienmay04.web4s.com.vn/templates/decor01/assets/media/icon/1.png"
-                alt="this-image"
-              />
+              <img src={icon1} alt="this-image" />
               <div className={styles.servicesItemContent}>
                 <h4>Hoàn tiền 100%</h4>
                 <p>Nếu sản phẩm lỗi</p>
@@ -20,10 +20,7 @@ const Services = () => {
           </div>
           <div className="col-xl-3 col-md-6">
             <div className={styles.servicesItem}>
-              <img
-                src="https://dienmay04.web4s.com.vn/templates/decor01/assets/media/icon/2.png"
-                alt="this-image"
-              />
+              <img src={icon2} alt="this-image" />
               <div className={styles.servicesItemContent}>
                 <h4>Đổi trả</h4>
                 <p>Đổi trả dưới 7 ngày</p>
@@ -32,10 +29,7 @@ const Services = () => {
           </div>
           <div className="col-xl-3 col-md-6">
             <div className={styles.servicesItem}>
-              <img
-                src="https://dienmay04.web4s.com.vn/templates/decor01/assets/media/icon/3.png"
-                alt="this-image"
-              />
+              <img src={icon3} alt="this-image" />
               <div className={styles.servicesItemContent}>
                 <h4>Giao hàng</h4>
                 <p>Miễn phí vận chuyển cho mọi đơn hàng</p>
@@ -44,10 +38,7 @@ const Services = () => {
           </div>
           <div className="col-xl-3 col-md-6">
             <div className={styles.servicesItem}>
-              <img
-                src="https://dienmay04.web4s.com.vn/templates/decor01/assets/media/icon/6.png"
-                alt="this-image"
-              />
+              <img src={icon4} alt="this-image" />
               <div className={styles.servicesItemContent}>
                 <h4>Hỗ trợ 24/7</h4>
                 <p>Hỗ trợ trực tuyến 24 giờ</p>
@@ -58,6 +49,7 @@ const Services = () => {
       </div>
     </div>
   );
-};` `
+};
+` `;
 
 export default Services;
